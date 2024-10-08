@@ -1,0 +1,20 @@
+ctrl+~ (terminal open) (command+~)
+ctrl+/ (comment-uncomment)
+ctrl+k+c (comment)
+ctrl+k+u (uncomment)
+ctrl+w (tab close)
+!, doc, html:5 (şablon html)
+alt+tab
+windows+tab
+alt+shift+f (format document)
+
+
+-------------------------------------------------
+acronym, bdo, blockquote, cite, q,ins,dfn, kbd,<pre>, <samp>, <var>
+base
+<area>, <map>, <param> and <object>
+https://www.w3schools.com/html/html_accessibility.asp
+html_accessibility
+
+
+semantic tags, form tags
