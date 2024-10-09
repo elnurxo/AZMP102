@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML forms</title>
+</head>
+
+<body>
+    <form id="add-form">
+        <label for="full-name">Full Name: </label>
+        <input name="full-name" id="full-name" type="text" placeholder="enter full name" minlength="2" maxlength="30"
+            required> <br>
+        <input name="email" type="email" placeholder="enter email" required> <br>
+        <input type="number" placeholder="enter age" min="17" max="60" required> <br>
+        <div>
+            <input type="url" placeholder="enter github url">
+        </div>
+        <div>
+            <input type="password" placeholder="enter password">
+        </div>
+        <input type="date">
+
+        <input type="file">
+        <hr>
+        <input type="range" min="0" max="100" step="50">
+        <div>
+            <label for="terms-of-use">accept terms of use?</label>
+            <input id="terms-of-use" type="checkbox">
+        </div>
+        <hr>
+        <label for="male">male</label>
+        <input name="gender" id="male" type="radio">
+        <label for="female">female</label>
+        <input name="gender" id="female" type="radio">
+        <hr>
+        <button type="submit">add</button>
+        <button type="reset">cancel</button>
+    </form>
+
+
+    <hr>
+
+    <h2>SECOND FORM</h2>
+    <form>
+        <fieldset>
+            <legend>student application</legend>
+            <label for="f-name">Full Name: </label>
+            <input type="file" required>
+            <input id="f-name" name="full-name" type="text" placeholder="full name">
+            <select name="country">
+                <optgroup label="asia">
+                    <option value="az">Azerbaijan</option>
+                    <option value="tr">Turkey</option>
+                </optgroup>
+                <optgroup label="europe">
+                    <option value="ru">Russia</option>
+                    <option value="ne">Netherland</option>
+                    <option value="de">Deutschland</option>
+                </optgroup>
+            </select>
+            <textarea name="" id="" cols="50" rows="10" required placeholder="enter message"></textarea>
+
+            <button type="submit">submit</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>
