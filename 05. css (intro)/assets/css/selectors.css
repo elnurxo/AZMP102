@@ -1,0 +1,95 @@
+/* h1 {
+  color: red;
+}
+.text.paragraph {
+  color: rgb(32, 201, 52);
+}
+
+#google  {
+  color: black;
+} */
+
+/* universal selector */
+/* tag name - 1 */
+/* class name - 10 */
+/* id name - 100 */
+/* * - 0 */
+
+/* h1,
+h2,
+h3 {
+  color: red;
+}
+
+div.box > p {
+  background-color: rgb(236, 115, 115);
+} */
+
+/* h1 + h2 + h3 + hr + div.box > p {
+  color: aqua;
+  background-color: skyblue;
+} */
+
+/* h1 ~ h3 {
+  color: red;
+}
+
+[href=".com"]
+{
+  border: 5px solid green;
+} */
+
+/* a:active {
+  background-color: red;
+}
+
+input:disabled {
+  background-color: red;
+}
+
+.box:empty {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+} */
+
+/* ul.links li:nth-child(odd) {
+  color: red;
+}
+
+.box-test p:nth-of-type(2) {
+  background-color: burlywood;
+}
+
+input:focus {
+  background-color: red;
+} */
+
+/* .new-box {
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+}
+
+.new-box:hover {
+  background-color: hotpink;
+  width: 400px;
+} */
+
+/* article p::selection {
+  background-color: red;
+  color: white;
+}
+article p::first-letter {
+  color: red;
+  font-size: 50px;
+} */
+
+#first::after {
+  content: "";
+  width: 100px;
+  height: 2px;
+  background-color: red;
+  color: black;
+  display: block;
+}
