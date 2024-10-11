@@ -1,0 +1,48 @@
+/* px, %, rem, em, vw, vh */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  width: 100%;
+  height: 80px;
+  background-color: rgb(108, 255, 243);
+  margin-bottom: 25px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+main #blog article h1 {
+  margin-bottom: 16px;
+}
+main #cards {
+  margin-top: 24px;
+}
+main #cards .card {
+  height: 400px;
+  background-color: red;
+  width: 50%;
+  margin: 20px auto;
+  color: white;
+}
+main #our-team article {
+  margin-top: 30px;
+}
+
+:root {
+  font-size: 100px;
+}
+
+#our-team article {
+  font-size: 20px;
+}
+
+#our-team h1 {
+  font-size: 2rem;
+}
+#our-team p {
+  font-size: 2em;
+}

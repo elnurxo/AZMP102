@@ -1,0 +1,25 @@
+/* color name */
+/* rgb - red green blue*/
+/* rgba - red green blue alpha (opacity)*/
+/* hex code */
+/* hsl - hue saturation lighting*/
+/* hsla - hue saturation lighting alpha (opacity)*/
+
+ul li:first-child {
+  color: olive;
+}
+ul li:nth-child(2) {
+  color: rgb(50, 205, 50);
+}
+ul li:nth-child(3) {
+  color: rgba(255, 170, 0, 0.666);
+}
+ul li:nth-child(4) {
+  color: #ff69b4;
+}
+ul li:nth-child(5) {
+  color: hsl(0, 70%, 50%);
+}
+ul li:nth-child(6) {
+  color: hsla(0, 70%, 50%, 0.5);
+}
