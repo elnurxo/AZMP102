@@ -1,0 +1,35 @@
+article h1 {
+  color: black;
+  text-align: center;
+  text-shadow: 2px 2px 5px red;
+  transition: 300ms;
+  cursor: pointer;
+  user-select: none;
+}
+article h1:hover {
+  word-spacing: 22px;
+}
+article p {
+  text-align: justify;
+  text-indent: 50px;
+  text-transform: lowercase;
+  /* line-height: 2.2rem; */
+}
+article a {
+  /* text-decoration: none; */
+  text-decoration-line: line-through;
+}
+.box {
+  width: 20%;
+  height: 300px;
+  border: 2px solid black;
+  margin: 20px auto;
+}
+.box p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+ul {
+  list-style: none;
+}
