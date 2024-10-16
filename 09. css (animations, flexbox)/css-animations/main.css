@@ -1,0 +1,163 @@
+.box {
+  width: 70%;
+  height: 500px;
+  margin: 30px auto;
+  border: 2px solid black;
+  position: relative;
+}
+.element {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: indianred;
+  animation-name: movement;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+
+.box:hover .element {
+  animation-play-state: paused;
+}
+
+@keyframes movement {
+  0% {
+    left: 0;
+    top: 0;
+    background: indianred;
+  }
+  25% {
+    left: calc(100% - 100px);
+    top: 0;
+    background: red;
+  }
+  50% {
+    left: calc(100% - 100px);
+    top: calc(100% - 100px);
+    background: orange;
+  }
+  75% {
+    left: 0;
+    top: calc(100% - 100px);
+    background: yellow;
+  }
+  100% {
+    left: 0;
+    top: 0;
+    background: indianred;
+  }
+}
+body {
+  height: 300vh;
+}
+hr {
+  margin: 50px auto;
+  width: 70%;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 22px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.heart-wrapper {
+  display: table;
+  margin: 0 auto;
+}
+.heart-wrapper i {
+  display: block;
+  margin: 10px auto;
+  font-size: 64px;
+  color: darkred;
+  animation: heartbeat 1s linear 0s infinite alternate none;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(1.4);
+  }
+  66% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.road {
+  margin-top: 300px;
+  border-bottom: 10px solid green;
+  position: relative;
+}
+.road img {
+  position: absolute;
+  bottom: -13px;
+  width: 200px;
+  height: 100px;
+  object-fit: cover;
+  animation-name: ride;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transform: rotate(-45deg);
+}
+
+@keyframes ride {
+  from {
+    left: 0;
+  }
+  to {
+    left: calc(100% - 200px);
+    transform: rotateY(180deg);
+  }
+}
+
+.cd-player {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 10px auto;
+  border: 1px solid black;
+  animation-name: player;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.cd-player:hover{
+    animation-play-state: paused;
+}
+.cd-player img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cd-player::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+@keyframes player {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
