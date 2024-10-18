@@ -1,0 +1,19 @@
+/* breakpoint */
+@media (max-width: 768px) {
+  body {
+    background-color: blue;
+  }
+}
+@media (max-width: 480px) and (min-width: 300px) {
+  body {
+    background-color: green;
+  }
+}
+@media (min-width: 300px) {
+    body {
+      background-color: green;
+    }
+  }
+body {
+  background-color: indianred;
+}
