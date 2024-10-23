@@ -1,0 +1,109 @@
+@use "sass:math";
+@use "variables"as x;
+@import "mixins";
+@import "./extends";
+
+body {
+    background-color: x.$primary-color;
+    font-family: x.$main-font;
+    border: x.$main-border;
+
+    article {
+        background-color: x.$dark-color;
+
+        h1 {
+            color: white;
+            font-size: 40px;
+
+            &:hover {
+                font-size: 60px;
+            }
+        }
+    }
+}
+
+
+.btn-primary {
+    @include btn(blue);
+}
+
+.btn-secondary {
+    @include btn(grey);
+}
+
+.btn-danger {
+    @include btn(red);
+}
+
+.btn-success {
+    @include btn(green);
+}
+
+.btn-warn {
+    @include btn(orange);
+}
+
+.btn-info {
+    @include btn(lightblue);
+}
+
+.box {
+    border: 2px solid black;
+    @extend %element-center;
+    @include avatar($circle: true, $size: 150px);
+}
+
+
+// body {
+//     @include theme-colors($light-theme: true);
+
+//     & {
+//         @include theme-colors($light-theme: false);
+//     }
+// }
+
+@mixin triangle($size, $color, $direction) {
+    height: 0;
+    width: 0;
+
+    border-color: transparent;
+    border-style: solid;
+    border-width: math.div($size, 2);
+
+    @if $direction==up {
+        border-bottom-color: $color;
+    }
+
+    @else if $direction==right {
+        border-left-color: $color;
+    }
+
+    @else if $direction==down {
+        border-top-color: $color;
+    }
+
+    @else if $direction==left {
+        border-right-color: $color;
+    }
+
+    @else {
+        @error "Unknown direction #{$direction}.";
+    }
+}
+
+.next {
+    @include triangle(5px, black, up);
+}
+
+$sizes: 40px,
+50px,
+80px,
+90px;
+
+@each $size in $sizes {
+    .icon-#{$size} {
+        font-size: $size;
+        height: $size;
+        width: $size;
+    }
+}
