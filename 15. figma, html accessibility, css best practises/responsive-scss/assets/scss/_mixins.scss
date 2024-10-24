@@ -1,0 +1,69 @@
+// Step 1: Define breakpoints
+$breakpoints: ('mobile': 480px,
+    'tablet': 768px,
+    'desktop': 1024px,
+    'large-desktop': 1440px,
+);
+
+// Step 2: Create a general media query mixin
+@mixin media-query($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        $value: map-get($breakpoints, $breakpoint);
+
+        @media (max-width: $value) {
+            @content; // Allow content to be passed into the mixin
+        }
+    }
+
+    @else {
+        @warn "Breakpoint `#{$breakpoint}` not found.";
+    }
+}
+
+// Step 3: Create specific mixins for each breakpoint
+@mixin mobile {
+    @include media-query('mobile') {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @include media-query('tablet') {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @include media-query('desktop') {
+        @content;
+    }
+}
+
+@mixin large-desktop {
+    @include media-query('large-desktop') {
+        @content;
+    }
+}
+
+// Example usage
+.example {
+    font-size: 16px;
+
+    @include mobile {
+        font-size: 14px; // Smaller font on mobile
+        background-color: red;
+        color: black;
+    }
+
+    @include tablet {
+        font-size: 16px; // Regular font on tablet
+    }
+
+    @include desktop {
+        font-size: 18px; // Larger font on desktop
+    }
+
+    @include large-desktop {
+        font-size: 20px; // Even larger font on large desktop
+    }
+}

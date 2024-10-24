@@ -1,0 +1,41 @@
+header {
+    background-color: $violet;
+    height: 44px;
+}
+.left-side{
+    display: flex;
+    column-gap: 48px;
+}
+.top-header {
+    height: 44px;
+    justify-content: space-between;
+    align-items: center;
+    color: $white;
+}
+
+.d-flex {
+    display: flex;
+}
+.right-side ul{
+    column-gap: 16px;
+    cursor: pointer;
+}
+.bottom-header{
+    background-color: $white;
+    height: 81px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bottom-header .logo a{
+    color: $heading-color;
+    font-size: 34px;
+    font-weight: bold;
+}
+.nav-links .active-link a{
+    color: $pink;
+}
+.nav-links{
+    display: flex;
+    column-gap: 34.55px;
+}

@@ -1,0 +1,7 @@
+.btn-input {
+    @include btn($pink, hotpink, 51px, 54px);
+}
+
+.btn-back-to-home {
+    @include btn($pink, hotpink, 165px, 44px, 6px);
+}

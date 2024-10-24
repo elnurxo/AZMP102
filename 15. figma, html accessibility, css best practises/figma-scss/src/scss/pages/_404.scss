@@ -1,0 +1,35 @@
+#hero {
+    background-color: $light-violet;
+    padding: 96px 0 126px;
+    margin-top: 81px;
+}
+
+#hero h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: $not-found-heading;
+}
+
+#hero h4 {
+    font-weight: normal;
+    font-size: 16px;
+    margin-top: 9px;
+}
+
+#hero #pink {
+    color: $pink;
+}
+
+#not-found {
+    padding: 28px 0px 311px;
+
+    .back-to-home {
+        display: block;
+        margin: 0px auto;
+    }
+}
+
+.center {
+    @extend %center-element;
+    flex-direction: column;
+}

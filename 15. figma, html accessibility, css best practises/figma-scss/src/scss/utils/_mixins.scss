@@ -1,0 +1,17 @@
+@import "./extends";
+
+@mixin btn($bgc, $hovercolor, $w, $h, $border-radius: 0px) {
+    width: $w;
+    height: $h;
+    border: none;
+    background-color: $bgc;
+    color: white;
+    @extend %center-element;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: .3s linear;
+
+    &:hover {
+        background-color: $hovercolor;
+    }
+}
