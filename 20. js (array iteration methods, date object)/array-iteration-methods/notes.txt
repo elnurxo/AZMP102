@@ -1,0 +1,7 @@
+spread/rest operator (destructing)
+array iteration methods
+custom methods (prototype)
+try-catch (throwing error)
+(sum of 0., toFixed, || && syntax, "use strict")
+
+//classes operator
