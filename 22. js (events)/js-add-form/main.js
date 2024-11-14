@@ -20,6 +20,13 @@ addForm.addEventListener("submit", function (ev) {
     students.push(newStudent);
     resetForm(nameInp, ageInp, hasPassedCheckBox);
     renderList(students);
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "New Student Added",
+      showConfirmButton: false,
+      timer: 2000,
+    });
   }
 });
 
@@ -36,8 +43,44 @@ function renderList(arr) {
       student.hasPassed ? "text-success" : "text-danger"
     } list-group-item student-item d-flex justify-content-between align-items-center">
                       <span>${student.fullName}, <b>${student.age}</b></span>
-                      <button class="btn btn-outline-danger">delete</button>
+                      <i>${moment(student.createdAt).format(
+                        "MMM Do YY, h:mm a"
+                      )}</i>
+                      <button data-id="${
+                        student.id
+                      }" class="btn btn-outline-danger delete">delete</button>
                   </li>`;
+  });
+
+  const deleteButtons = Array.from(document.querySelectorAll(".delete"));
+
+  deleteButtons.forEach((deleteBtn) => {
+    deleteBtn.addEventListener("click", function () {
+      Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          this.closest("li").remove();
+          const idx = students.findIndex(
+            (student) => student.id === Number(this.getAttribute("data-id"))
+          );
+          const newStudents = [...students.splice(idx, 1)];
+          console.log(students);
+          console.log(newStudents);
+          Swal.fire({
+            title: "Deleted!",
+            text: "Your file has been deleted.",
+            icon: "success",
+          });
+        }
+      });
+    });
   });
 }
 

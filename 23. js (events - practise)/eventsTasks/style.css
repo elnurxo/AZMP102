@@ -1,0 +1,46 @@
+.my-btn {
+  display: block;
+  margin: 20px auto;
+  border: none;
+  background-color: white;
+  color: black;
+  padding: 12px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#mode {
+  width: 70%;
+  height: 500px;
+  border-radius: 10px;
+  margin: 10px auto;
+  border: 3px solid black;
+  transition: 0.3s linear;
+}
+.dark {
+  background-color: black;
+  color: white;
+}
+.my-dark-btn {
+  color: white;
+  background-color: black;
+}
+hr{
+  margin: 33px auto;
+  width: 80%;
+}
+body{
+  height: 500vh;
+}
+.text{
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0px 22px;
+  margin-top: 10px;
+  height: 9%;
+  overflow: hidden;
+  transition: .4s linear;
+}
+.hide{
+  height: 0%;
+}
