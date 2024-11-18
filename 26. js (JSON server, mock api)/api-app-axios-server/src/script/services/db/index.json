@@ -1,0 +1,122 @@
+{
+    "singers": [
+        {
+            "id": 1,
+            "stageName": "The Weeknd",
+            "realName": "Abel Tesfaye",
+            "genre": "R&B, Pop",
+            "age": 34,
+            "nationality": "Canadian",
+            "monthlyListeners": 100000000,
+            "debutYear": 2010,
+            "label": "XO, Republic",
+            "albums": ["Starboy", "After Hours", "Dawn FM"],
+            "awardsWon": 17
+        },
+        {
+            "id": 2,
+            "stageName": "Kendrick Lamar",
+            "realName": "Kendrick Duckworth",
+            "genre": "Hip-Hop",
+            "age": 36,
+            "nationality": "American",
+            "monthlyListeners": 45000000,
+            "debutYear": 2011,
+            "label": "Top Dawg, Interscope",
+            "albums": ["good kid, m.A.A.d city", "DAMN.", "Mr. Morale & the Big Steppers"],
+            "awardsWon": 14
+        },
+        {
+            "id": 3,
+            "stageName": "Tyler, The Creator",
+            "realName": "Tyler Gregory Okonma",
+            "genre": "Hip-Hop, Neo Soul",
+            "age": 33,
+            "nationality": "American",
+            "monthlyListeners": 25000000,
+            "debutYear": 2009,
+            "label": "Columbia",
+            "albums": ["IGOR", "CALL ME IF YOU GET LOST"],
+            "awardsWon": 7
+        },
+        {
+            "id": 4,
+            "stageName": "Frank Ocean",
+            "realName": "Christopher Edwin Breaux",
+            "genre": "Neo Soul, R&B",
+            "age": 36,
+            "nationality": "American",
+            "monthlyListeners": 20000000,
+            "debutYear": 2011,
+            "label": "Def Jam, Blonded",
+            "albums": ["Channel Orange", "Blonde"],
+            "awardsWon": 4
+        },
+        {
+            "id": 5,
+            "stageName": "Beyoncé",
+            "realName": "Beyoncé Giselle Knowles-Carter",
+            "genre": "R&B, Pop",
+            "age": 42,
+            "nationality": "American",
+            "monthlyListeners": 57000000,
+            "debutYear": 1997,
+            "label": "Parkwood, Columbia",
+            "albums": ["Lemonade", "Renaissance"],
+            "awardsWon": 32
+        },
+        {
+            "id": 6,
+            "stageName": "Drake",
+            "realName": "Aubrey Drake Graham",
+            "genre": "Hip-Hop, R&B",
+            "age": 38,
+            "nationality": "Canadian",
+            "monthlyListeners": 85000000,
+            "debutYear": 2009,
+            "label": "OVO Sound, Republic",
+            "albums": ["Take Care", "Certified Lover Boy", "Her Loss"],
+            "awardsWon": 15
+        },
+        {
+            "id": 7,
+            "stageName": "Adele",
+            "realName": "Adele Laurie Blue Adkins",
+            "genre": "Pop, Soul",
+            "age": 35,
+            "nationality": "British",
+            "monthlyListeners": 61000000,
+            "debutYear": 2008,
+            "label": "XL, Columbia",
+            "albums": ["21", "25", "30"],
+            "awardsWon": 20
+        },
+        {
+            "id": 8,
+            "stageName": "Billie Eilish",
+            "realName": "Billie Eilish Pirate Baird O'Connell",
+            "genre": "Pop, Alternative",
+            "age": 22,
+            "nationality": "American",
+            "monthlyListeners": 60000000,
+            "debutYear": 2015,
+            "label": "Darkroom, Interscope",
+            "albums": ["When We All Fall Asleep, Where Do We Go?", "Happier Than Ever"],
+            "awardsWon": 10
+        },
+        {
+            "id": 9,
+            "stageName": "Harry Styles",
+            "realName": "Harry Edward Styles",
+            "genre": "Pop, Rock",
+            "age": 30,
+            "nationality": "British",
+            "monthlyListeners": 80000000,
+            "debutYear": 2011,
+            "label": "Columbia",
+            "albums": ["Fine Line", "Harry's House"],
+            "awardsWon": 5
+        }
+    ],
+    "songs": []
+}
