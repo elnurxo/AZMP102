@@ -82,13 +82,14 @@
     <section id="singers">
       <div class="container">
         <h1 class="title has-text-centered">Singers</h1>
-        <div class="search-and-sort is-flex is-half">
+        <div class="search-and-sort is-flex">
           <input id="search" type="text" class="input mr-5 is-success" placeholder="search for artist">
-          <div class="filter-by-nationality field mr-3">
+          <div class="filter-by-nationality field mr-3 is-half">
             <p class="control has-icons-left">
               <span class="select is-success">
                 <select id="nationality">
                   <option disabled selected>Country</option>
+                  <option value="All">All Countries</option>
                   <option value="Afghan">Afghan</option>
                   <option value="Albanian">Albanian</option>
                   <option value="American">American</option>
@@ -140,7 +141,7 @@
               </span>
             </p>
           </div>
-          <div class="sort-by-age field">
+          <div class="sort-by-age field is-half">
             <p class="control has-icons-left">
               <span class="select is-success">
                 <select id="sort-by-age">

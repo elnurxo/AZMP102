@@ -45,7 +45,11 @@ countrySelectOption.addEventListener("change", async function (e) {
   const filteredSingers = [
     ...data.filter((singer) => singer.nationality === value),
   ];
-  renderSingerCards(filteredSingers);
+  if (value === "All") {
+    renderSingerCards(data);
+  } else {
+    renderSingerCards(filteredSingers);
+  }
 });
 
 //sort singers
