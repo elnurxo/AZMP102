@@ -1,1 +1,1 @@
-export const HOME_PAGE_URL = "http://localhost:5173/index.html";
+export const HOME_PAGE_URL = "https://singerz.vercel.app/";
