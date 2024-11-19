@@ -12,6 +12,7 @@ export default defineConfig({
         favorites: "favorites.html",
         ["add-singer"]: "add-singer.html",
         detail: "detail.html",
+        ['edit-singer']: "edit-singer.html",
       },
     },
   },

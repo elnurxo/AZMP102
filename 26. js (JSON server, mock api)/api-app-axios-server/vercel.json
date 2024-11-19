@@ -6,6 +6,7 @@
     { "source": "/login", "destination": "/login.html" },
     { "source": "/favorites", "destination": "/favorites.html" },
     { "source": "/add-singer", "destination": "/add-singer.html" },
+    { "source": "/edit-singer", "destination": "/edit-singer.html" },
     { "source": "/detail", "destination": "/detail.html" },
     { "source": "/", "destination": "/index.html" },
     { "source": "/(.*)", "destination": "/404.html" }
