@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/7/71/Spotify.png">
+    <link rel="stylesheet" href="./node_modules/bulma/css/bulma.css" />
+    <link rel="stylesheet" href="./src/style/main.css">
+    <title>Music App | Register</title>
+</head>
+
+<body>
+    <header class="container">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="https://spotify.com" target="_blank">
+                    <img width="30" height="80"
+                        src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green.png"
+                        alt="spotify logo">
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a href="index.html" class="navbar-item">
+                        Home
+                    </a>
+
+                    <a href="about.html" class="navbar-item">
+                        About
+                    </a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            More
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <a href="contact.html" class="navbar-item">
+                                Contact
+                            </a>
+                            <a href="favorites.html" class="navbar-item">
+                                Favorites
+                            </a>
+                            <a href="add-singer.html" class="navbar-item">
+                                Add Singer
+                            </a>
+                            <hr class="navbar-divider">
+                            <a href="mailto:spotify-support@gmail.com" class="navbar-item">
+                                Report an issue
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a href="register.html" class="button is-primary">
+                                <strong>Sign up</strong>
+                            </a>
+                            <a href="login.html" class="button is-light">
+                                Log in
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <section id="register">
+            <div class="container">
+                <h1 class="title has-text-centered">Create an account and start to explore!</h1>
+                <hr>
+                <form class="column is-5" style="margin: 14px auto;" id="register-form">
+                    <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="email" placeholder="Username">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-user"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="email" placeholder="Email">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="field">
+                        <p class="control has-icons-left">
+                            <input class="input" type="password" placeholder="Password">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="field">
+                        <p class="control has-icons-left">
+                            <input class="input" type="password" placeholder="Confirm Password">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="file has-name">
+                        <label class="file-label">
+                            <input class="file-input" type="file" name="resume" />
+                            <span class="file-cta">
+                                <span class="file-icon">
+                                    <i class="fas fa-upload"></i>
+                                </span>
+                                <span class="file-label"> Choose profile picture</span>
+                            </span>
+                            <span class="file-name">example.jpg</span>
+                        </label>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                I agree to the <a class="has-text-success has-text-weight-bold"
+                                    href="https://spotify.com" target="_blank">terms and conditions</a>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <p class="control is-flex is-justify-content-center">
+                            <button style="width: 100%;" class="has-text-white button is-success">
+                                Register
+                            </button>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+
+    <script type="module" src="./src/script/main.js"></script>
+</body>
+
+</html>

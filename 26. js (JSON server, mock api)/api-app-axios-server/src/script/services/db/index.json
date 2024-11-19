@@ -1,122 +1,216 @@
 {
-    "singers": [
-        {
-            "id": 1,
-            "stageName": "The Weeknd",
-            "realName": "Abel Tesfaye",
-            "genre": "R&B, Pop",
-            "age": 34,
-            "nationality": "Canadian",
-            "monthlyListeners": 100000000,
-            "debutYear": 2010,
-            "label": "XO, Republic",
-            "albums": ["Starboy", "After Hours", "Dawn FM"],
-            "awardsWon": 17
-        },
-        {
-            "id": 2,
-            "stageName": "Kendrick Lamar",
-            "realName": "Kendrick Duckworth",
-            "genre": "Hip-Hop",
-            "age": 36,
-            "nationality": "American",
-            "monthlyListeners": 45000000,
-            "debutYear": 2011,
-            "label": "Top Dawg, Interscope",
-            "albums": ["good kid, m.A.A.d city", "DAMN.", "Mr. Morale & the Big Steppers"],
-            "awardsWon": 14
-        },
-        {
-            "id": 3,
-            "stageName": "Tyler, The Creator",
-            "realName": "Tyler Gregory Okonma",
-            "genre": "Hip-Hop, Neo Soul",
-            "age": 33,
-            "nationality": "American",
-            "monthlyListeners": 25000000,
-            "debutYear": 2009,
-            "label": "Columbia",
-            "albums": ["IGOR", "CALL ME IF YOU GET LOST"],
-            "awardsWon": 7
-        },
-        {
-            "id": 4,
-            "stageName": "Frank Ocean",
-            "realName": "Christopher Edwin Breaux",
-            "genre": "Neo Soul, R&B",
-            "age": 36,
-            "nationality": "American",
-            "monthlyListeners": 20000000,
-            "debutYear": 2011,
-            "label": "Def Jam, Blonded",
-            "albums": ["Channel Orange", "Blonde"],
-            "awardsWon": 4
-        },
-        {
-            "id": 5,
-            "stageName": "Beyoncé",
-            "realName": "Beyoncé Giselle Knowles-Carter",
-            "genre": "R&B, Pop",
-            "age": 42,
-            "nationality": "American",
-            "monthlyListeners": 57000000,
-            "debutYear": 1997,
-            "label": "Parkwood, Columbia",
-            "albums": ["Lemonade", "Renaissance"],
-            "awardsWon": 32
-        },
-        {
-            "id": 6,
-            "stageName": "Drake",
-            "realName": "Aubrey Drake Graham",
-            "genre": "Hip-Hop, R&B",
-            "age": 38,
-            "nationality": "Canadian",
-            "monthlyListeners": 85000000,
-            "debutYear": 2009,
-            "label": "OVO Sound, Republic",
-            "albums": ["Take Care", "Certified Lover Boy", "Her Loss"],
-            "awardsWon": 15
-        },
-        {
-            "id": 7,
-            "stageName": "Adele",
-            "realName": "Adele Laurie Blue Adkins",
-            "genre": "Pop, Soul",
-            "age": 35,
-            "nationality": "British",
-            "monthlyListeners": 61000000,
-            "debutYear": 2008,
-            "label": "XL, Columbia",
-            "albums": ["21", "25", "30"],
-            "awardsWon": 20
-        },
-        {
-            "id": 8,
-            "stageName": "Billie Eilish",
-            "realName": "Billie Eilish Pirate Baird O'Connell",
-            "genre": "Pop, Alternative",
-            "age": 22,
-            "nationality": "American",
-            "monthlyListeners": 60000000,
-            "debutYear": 2015,
-            "label": "Darkroom, Interscope",
-            "albums": ["When We All Fall Asleep, Where Do We Go?", "Happier Than Ever"],
-            "awardsWon": 10
-        },
-        {
-            "id": 9,
-            "stageName": "Harry Styles",
-            "realName": "Harry Edward Styles",
-            "genre": "Pop, Rock",
-            "age": 30,
-            "nationality": "British",
-            "monthlyListeners": 80000000,
-            "debutYear": 2011,
-            "label": "Columbia",
-            "albums": ["Fine Line", "Harry's House"],
-            "awardsWon": 5
-        }
-    ],
-    "songs": []
+  "singers": [
+    {
+      "id": "1",
+      "stageName": "The Weeknd",
+      "realName": "Abel Tesfaye",
+      "genre": "R&B, Pop",
+      "age": 34,
+      "nationality": "Canadian",
+      "monthlyListeners": 100000000,
+      "debutYear": 2010,
+      "img": "https://wallpapers.com/images/hd/the-weeknd-1920-x-1080-background-mt4i35t2p2spfg1r.jpg",
+      "label": "XO, Republic",
+      "albums": [
+        "Starboy",
+        "After Hours",
+        "Dawn FM"
+      ],
+      "awardsWon": 17
+    },
+    {
+      "id": "2",
+      "stageName": "Kendrick Lamar",
+      "realName": "Kendrick Duckworth",
+      "genre": "Hip-Hop",
+      "age": 36,
+      "nationality": "American",
+      "monthlyListeners": 12600000,
+      "debutYear": 2011,
+      "img": "https://wallpapercat.com/w/full/e/a/a/46450-2048x1376-desktop-hd-kendrick-lamar-wallpaper-image.jpg",
+      "label": "Top Dawg, Interscope",
+      "albums": [
+        "good kid, m.A.A.d city",
+        "DAMN.",
+        "Mr. Morale & the Big Steppers"
+      ],
+      "awardsWon": 14
+    },
+    {
+      "id": "3",
+      "stageName": "Tyler, The Creator",
+      "realName": "Tyler Gregory Okonma",
+      "genre": "Hip-Hop, Neo Soul",
+      "age": 33,
+      "nationality": "American",
+      "monthlyListeners": 25000000,
+      "debutYear": 2009,
+      "img": "https://media.gq-magazine.co.uk/photos/5dc2977e6d26fb00086d186e/16:9/w_2560%2Cc_limit/Tyler-the-creator-Landscape-1-611.jpg",
+      "label": "Columbia",
+      "albums": [
+        "IGOR",
+        "CALL ME IF YOU GET LOST"
+      ],
+      "awardsWon": 7
+    },
+    {
+      "id": "4",
+      "stageName": "Frank Ocean",
+      "realName": "Christopher Edwin Breaux",
+      "genre": "Neo Soul, R&B",
+      "age": 36,
+      "nationality": "American",
+      "monthlyListeners": 20000000,
+      "debutYear": 2011,
+      "img": "https://www.rollingstone.com/wp-content/uploads/2023/04/frank-ocean-july-RS-1800.jpg?crop=0px%2C18px%2C1800px%2C1014px&resize=1600%2C900",
+      "label": "Def Jam, Blonded",
+      "albums": [
+        "Channel Orange",
+        "Blonde"
+      ],
+      "awardsWon": 4
+    },
+    {
+      "id": "5",
+      "stageName": "Beyoncé",
+      "realName": "Beyoncé Giselle Knowles-Carter",
+      "genre": "R&B, Pop",
+      "age": 42,
+      "nationality": "American",
+      "monthlyListeners": 57000000,
+      "debutYear": 1997,
+      "img": "https://c4.wallpaperflare.com/wallpaper/668/766/366/beyonce-hd-widescreen-wallpaper-preview.jpg",
+      "label": "Parkwood, Columbia",
+      "albums": [
+        "Lemonade",
+        "Renaissance"
+      ],
+      "awardsWon": 32
+    },
+    {
+      "id": "6",
+      "stageName": "Drake",
+      "realName": "Aubrey Drake Graham",
+      "genre": "Hip-Hop, R&B",
+      "age": 38,
+      "nationality": "Canadian",
+      "monthlyListeners": 85000000,
+      "debutYear": 2009,
+      "img": "https://wallpapercat.com/w/full/e/5/c/14677-3840x2160-desktop-4k-drake-background-image.jpg",
+      "label": "OVO Sound, Republic",
+      "albums": [
+        "Take Care",
+        "Certified Lover Boy",
+        "Her Loss"
+      ],
+      "awardsWon": 15
+    },
+    {
+      "id": "7",
+      "stageName": "Adele",
+      "realName": "Adele Laurie Blue Adkins",
+      "genre": "Pop, Soul",
+      "age": 35,
+      "nationality": "British",
+      "monthlyListeners": 61000000,
+      "debutYear": 2008,
+      "img": "https://wallpapers.com/images/featured/adele-hmuxzhg7ivf7jm2f.jpg",
+      "label": "XL, Columbia",
+      "albums": [
+        "21",
+        "25",
+        "30"
+      ],
+      "awardsWon": 20
+    },
+    {
+      "id": "8",
+      "stageName": "Billie Eilish",
+      "realName": "Billie Eilish Pirate Baird O'Connell",
+      "genre": "Pop, Alternative",
+      "age": 22,
+      "nationality": "American",
+      "monthlyListeners": 60000000,
+      "debutYear": 2015,
+      "img": "https://www.nme.com/wp-content/uploads/2021/07/Billie-Eilish.jpg",
+      "label": "Darkroom, Interscope",
+      "albums": [
+        "When We All Fall Asleep, Where Do We Go?",
+        "Happier Than Ever"
+      ],
+      "awardsWon": 10
+    },
+    {
+      "id": "9",
+      "stageName": "Harry Styles",
+      "realName": "Harry Edward Styles",
+      "genre": "Pop, Rock",
+      "age": 30,
+      "nationality": "British",
+      "monthlyListeners": 80000000,
+      "debutYear": 2011,
+      "img": "https://wallpapers.com/images/hd/harry-styles-background-gh9a2f40cadqp47d.jpg",
+      "label": "Columbia",
+      "albums": [
+        "Fine Line",
+        "Harry's House"
+      ],
+      "awardsWon": 5
+    },
+    {
+      "id": "10",
+      "stageName": "Kanye West",
+      "realName": "Kanye Omari West",
+      "genre": "Hip-Hop, Rap, Pop",
+      "age": 46,
+      "nationality": "American",
+      "monthlyListeners": 32000000,
+      "debutYear": 2004,
+      "img": "https://i0.wp.com/oilcity.news/wp-content/uploads/2019/12/120319-kanye001-scaled.jpg?fit=1080%2C646&ssl=1",
+      "label": "GOOD Music, Def Jam",
+      "albums": [
+        "The College Dropout",
+        "Late Registration",
+        "My Beautiful Dark Twisted Fantasy"
+      ],
+      "awardsWon": 22
+    },
+    {
+      "id": "11",
+      "stageName": "Michael Jackson",
+      "realName": "Michael Joseph Jackson",
+      "genre": "Pop, R&B",
+      "age": 50,
+      "nationality": "American",
+      "monthlyListeners": 30000000,
+      "debutYear": 1964,
+      "img": "https://images.alphacoders.com/524/thumb-1920-524509.jpg",
+      "label": "Epic Records",
+      "albums": [
+        "Thriller",
+        "Bad",
+        "Dangerous"
+      ],
+      "awardsWon": 13
+    },
+    {
+      "id": "12",
+      "stageName": "Guns n Roses",
+      "realName": "Guns N' Roses (Band)",
+      "genre": "Rock, Hard Rock",
+      "age": 36,
+      "nationality": "American",
+      "monthlyListeners": 25000000,
+      "debutYear": 1985,
+      "img": "https://c4.wallpaperflare.com/wallpaper/662/748/933/guns-n-roses-wallpaper-preview.jpg",
+      "label": "Geffen, UMG",
+      "albums": [
+        "Appetite for Destruction",
+        "Use Your Illusion I",
+        "Chinese Democracy"
+      ],
+      "awardsWon": 18
+    }
+  ],
+  "songs": []
 }

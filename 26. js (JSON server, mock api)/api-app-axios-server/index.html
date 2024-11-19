@@ -4,16 +4,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/7/71/Spotify.png">
+  <link rel="stylesheet" href="./node_modules/bulma/css/bulma.css" />
   <link rel="stylesheet" href="./src/style/main.css">
-  <title>Axios API app</title>
+  <title>Music App | Home</title>
 </head>
 
 <body>
-  <header>
+  <header class="container">
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="https://spotify.com" target="_blank">
-          <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green.png"
+          <img width="30" height="80"
+            src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green.png"
             alt="spotify logo">
         </a>
 
@@ -44,11 +47,14 @@
               <a href="contact.html" class="navbar-item">
                 Contact
               </a>
-              <a href="favorties.html" href="" class="navbar-item">
+              <a href="favorites.html" class="navbar-item">
                 Favorites
               </a>
+              <a href="add-singer.html" class="navbar-item">
+                Add Singer
+              </a>
               <hr class="navbar-divider">
-              <a class="navbar-item">
+              <a href="mailto:spotify-support@gmail.com" class="navbar-item">
                 Report an issue
               </a>
             </div>
@@ -76,7 +82,81 @@
     <section id="singers">
       <div class="container">
         <h1 class="title has-text-centered">Singers</h1>
-        <div class="columns is-multiline is-variable is-4 singers-wrapper">
+        <div class="search-and-sort is-flex is-half">
+          <input id="search" type="text" class="input mr-5 is-success" placeholder="search for artist">
+          <div class="filter-by-nationality field mr-3">
+            <p class="control has-icons-left">
+              <span class="select is-success">
+                <select id="nationality">
+                  <option disabled selected>Country</option>
+                  <option value="Afghan">Afghan</option>
+                  <option value="Albanian">Albanian</option>
+                  <option value="American">American</option>
+                  <option value="Argentinian">Argentinian</option>
+                  <option value="Australian">Australian</option>
+                  <option value="Austrian">Austrian</option>
+                  <option value="Azerbaijani">Azerbaijani</option>
+                  <option value="Bangladeshi">Bangladeshi</option>
+                  <option value="Belgian">Belgian</option>
+                  <option value="Brazilian">Brazilian</option>
+                  <option value="British">British</option>
+                  <option value="Canadian">Canadian</option>
+                  <option value="Chinese">Chinese</option>
+                  <option value="Colombian">Colombian</option>
+                  <option value="Croatian">Croatian</option>
+                  <option value="Cuban">Cuban</option>
+                  <option value="Czech">Czech</option>
+                  <option value="Danish">Danish</option>
+                  <option value="Dutch">Dutch</option>
+                  <option value="Egyptian">Egyptian</option>
+                  <option value="Filipino">Filipino</option>
+                  <option value="Finnish">Finnish</option>
+                  <option value="French">French</option>
+                  <option value="German">German</option>
+                  <option value="Greek">Greek</option>
+                  <option value="Indian">Indian</option>
+                  <option value="Indonesian">Indonesian</option>
+                  <option value="Irish">Irish</option>
+                  <option value="Italian">Italian</option>
+                  <option value="Japanese">Japanese</option>
+                  <option value="Korean">Korean</option>
+                  <option value="Mexican">Mexican</option>
+                  <option value="Norwegian">Norwegian</option>
+                  <option value="Pakistani">Pakistani</option>
+                  <option value="Polish">Polish</option>
+                  <option value="Portuguese">Portuguese</option>
+                  <option value="Russian">Russian</option>
+                  <option value="South African">South African</option>
+                  <option value="Spanish">Spanish</option>
+                  <option value="Swedish">Swedish</option>
+                  <option value="Swiss">Swiss</option>
+                  <option value="Turkish">Turkish</option>
+                  <option value="Ukrainian">Ukrainian</option>
+                  <option value="Vietnamese">Vietnamese</option>
+                </select>
+              </span>
+              <span class="icon is-small is-left">
+                <i class="fas fa-globe"></i>
+              </span>
+            </p>
+          </div>
+          <div class="sort-by-age field">
+            <p class="control has-icons-left">
+              <span class="select is-success">
+                <select id="sort-by-age">
+                  <option selected disabled>Sort by age</option>
+                  <option value="from-oldest">from oldest</option>
+                  <option value="from-youngest">from youngest</option>
+                </select>
+              </span>
+              <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+              </span>
+            </p>
+          </div>
+        </div>
+        <hr>
+        <div class="columns is-multiline singers-wrapper">
         </div>
       </div>
     </section>

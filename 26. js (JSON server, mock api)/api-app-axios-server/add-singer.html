@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/7/71/Spotify.png">
+    <link rel="stylesheet" href="./node_modules/bulma/css/bulma.css" />
+    <link rel="stylesheet" href="./src/style/main.css">
+    <title>Music App | Add Singer</title>
+</head>
+
+<body>
+    <header class="container">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="https://spotify.com" target="_blank">
+                    <img width="30" height="80"
+                        src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green.png"
+                        alt="spotify logo">
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a href="index.html" class="navbar-item">
+                        Home
+                    </a>
+
+                    <a href="about.html" class="navbar-item">
+                        About
+                    </a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            More
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <a href="contact.html" class="navbar-item">
+                                Contact
+                            </a>
+                            <a href="favorites.html" class="navbar-item">
+                                Favorites
+                            </a>
+                            <a href="add-singer.html" class="navbar-item">
+                                Add Singer
+                            </a>
+                            <hr class="navbar-divider">
+                            <a href="mailto:spotify-support@gmail.com" class="navbar-item">
+                                Report an issue
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a href="register.html" class="button is-primary">
+                                <strong>Sign up</strong>
+                            </a>
+                            <a href="login.html" class="button is-light">
+                                Log in
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <section id="add-singer">
+            <div class="container">
+                <h1 class="title has-text-centered">Add New Singer!</h1>
+                <hr>
+                <form class="column is-5" style="margin: 14px auto;" id="add-singer-form">
+                    <div class="field">
+                        <label class="label" for="stage-name">Stage Name</label>
+                        <p class="control has-icons-left has-icons-right">
+                            <input id="stage-name" class="input" type="text" placeholder="Stage Name">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-user"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="field">
+                        <label class="label" for="real-name">Real Name</label>
+                        <p class="control has-icons-left has-icons-right">
+                            <input id="real-name" class="input" type="text" placeholder="Real Name">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-user"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="field columns">
+                        <p class="is-6 is-mobile-12 column control has-icons-left">
+                            <label class="label" for="age">Age</label>
+                            <input id="age" class="input" type="number" placeholder="Age" min="0">
+                        </p>
+                        <p class="is-6 is-mobile-12 column control has-icons-left">
+                            <label class="label" for="debut-year">Debut Year</label>
+                            <input id="debut-year" class="input" type="month" min="1800" max="2024">
+                        </p>
+                    </div>
+                    <div class="field">
+                        <label class="label" for="image-url">Image URL</label>
+                        <p class="control has-icons-left has-icons-right">
+                            <input id="image-url" class="input" type="url" placeholder="Image URL">
+                            <span class="icon is-small is-left">
+                                <i class="fa-solid fa-link"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="field columns">
+                        <p class="is-6 is-mobile-12 column control has-icons-left">
+                            <label class="label" for="monthly-listeners">Monthly Listeners</label>
+                            <input id="monthly-listeners" class="input" type="number" placeholder="Monthly Listeners"
+                                min="0">
+                        </p>
+                        <p class="is-6 is-mobile-12 column control has-icons-left">
+                            <label class="label" for="awards-won">Awards Won</label>
+                            <input id="awards-won" class="input" type="number" placeholder="Awards Won" min="0">
+                        </p>
+                    </div>
+                    <div class="field">
+                        <label class="label" for="label-company">Label Company</label>
+                        <p class="control has-icons-left">
+                            <input id="label-company" class="input" type="text" placeholder="Label Company">
+                            <span class="icon is-small is-left">
+                                <i class="fa-solid fa-file-signature"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="field columns">
+                        <div class="is-6 is-mobile-12 column control has-icons-left">
+                            <label class="label" for="genres">Genres</label>
+                            <div class="control has-icons-left">
+                                <div style="width: 100%;" class="select is-multiple">
+                                    <select style="width: 100%;" id="genres" multiple>
+                                        <option disabled selected>Genres</option>
+                                        <option value="Alternative">Alternative</option>
+                                        <option value="Blues">Blues</option>
+                                        <option value="Classical">Classical</option>
+                                        <option value="Country">Country</option>
+                                        <option value="Disco">Disco</option>
+                                        <option value="Electronic/Dance">Electronic/Dance</option>
+                                        <option value="Folk">Folk</option>
+                                        <option value="Funk">Funk</option>
+                                        <option value="Hip-Hop">Hip-Hop</option>
+                                        <option value="Indie">Indie</option>
+                                        <option value="Jazz">Jazz</option>
+                                        <option value="K-Pop">K-Pop</option>
+                                        <option value="Latin">Latin</option>
+                                        <option value="Metal">Metal</option>
+                                        <option value="Neo Soul">Neo Soul</option>
+                                        <option value="Pop">Pop</option>
+                                        <option value="Rap">Rap</option>
+                                        <option value="Reggae">Reggae</option>
+                                        <option value="Rock">Rock</option>
+                                        <option value="Soul">Soul</option>
+                                        <option value="Techno">Techno</option>
+                                    </select>
+                                </div>
+                                <div class="icon is-small is-left">
+                                    <i class="fas fa-music"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="is-6 is-mobile-12 column control has-icons-left">
+                            <label class="label" for="nationality">Nationality</label>
+                            <div class="control has-icons-left">
+                                <div style="width: 100%;" class="select">
+                                    <select style="width: 100%;" id="nationality">
+                                        <option value="Afghan">Afghan</option>
+                                        <option value="Albanian">Albanian</option>
+                                        <option value="American">American</option>
+                                        <option value="Argentinian">Argentinian</option>
+                                        <option value="Australian">Australian</option>
+                                        <option value="Austrian">Austrian</option>
+                                        <option value="Azerbaijani">Azerbaijani</option>
+                                        <option value="Bangladeshi">Bangladeshi</option>
+                                        <option value="Belgian">Belgian</option>
+                                        <option value="Brazilian">Brazilian</option>
+                                        <option value="British">British</option>
+                                        <option value="Canadian">Canadian</option>
+                                        <option value="Chinese">Chinese</option>
+                                        <option value="Colombian">Colombian</option>
+                                        <option value="Croatian">Croatian</option>
+                                        <option value="Cuban">Cuban</option>
+                                        <option value="Czech">Czech</option>
+                                        <option value="Danish">Danish</option>
+                                        <option value="Dutch">Dutch</option>
+                                        <option value="Egyptian">Egyptian</option>
+                                        <option value="Filipino">Filipino</option>
+                                        <option value="Finnish">Finnish</option>
+                                        <option value="French">French</option>
+                                        <option value="German">German</option>
+                                        <option value="Greek">Greek</option>
+                                        <option value="Indian">Indian</option>
+                                        <option value="Indonesian">Indonesian</option>
+                                        <option value="Irish">Irish</option>
+                                        <option value="Italian">Italian</option>
+                                        <option value="Japanese">Japanese</option>
+                                        <option value="Korean">Korean</option>
+                                        <option value="Mexican">Mexican</option>
+                                        <option value="Norwegian">Norwegian</option>
+                                        <option value="Pakistani">Pakistani</option>
+                                        <option value="Polish">Polish</option>
+                                        <option value="Portuguese">Portuguese</option>
+                                        <option value="Russian">Russian</option>
+                                        <option value="South African">South African</option>
+                                        <option value="Spanish">Spanish</option>
+                                        <option value="Swedish">Swedish</option>
+                                        <option value="Swiss">Swiss</option>
+                                        <option value="Turkish">Turkish</option>
+                                        <option value="Ukrainian">Ukrainian</option>
+                                        <option value="Vietnamese">Vietnamese</option>
+                                    </select>
+
+                                </div>
+                                <div class="icon is-small is-left">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="albums" class="label">Albums</label>
+                        <p class="control has-icons-left">
+                            <input class="input" type="text" placeholder="Albums (separate albums with comma)">
+                            <span class="icon is-small is-left">
+                                <i class="fa-solid fa-record-vinyl"></i>
+                            </span>
+                        </p>
+                    </div>
+
+                    <div class="field">
+                        <p class="control is-flex is-justify-content-center">
+                            <button style="width: 100%;" class="has-text-white button is-success">
+                                Add
+                            </button>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+
+    <script type="module" src="./src/script/main.js"></script>
+</body>
+
+</html>
