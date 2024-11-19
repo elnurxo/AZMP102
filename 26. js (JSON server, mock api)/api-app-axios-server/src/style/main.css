@@ -39,7 +39,8 @@
 #register,
 #add-singer,
 #singer-detail,
-#favorites {
+#favorites,
+#not-found {
   margin-top: 22px;
 }
 

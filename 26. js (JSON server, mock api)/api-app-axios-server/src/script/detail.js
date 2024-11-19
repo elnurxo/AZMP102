@@ -25,8 +25,16 @@ const monthlyListeners = document.querySelector("#monthly-listeners");
 const deleteBtn = document.querySelector(".delete-btn");
 
 document.addEventListener("DOMContentLoaded", async function () {
-  const { data } = await getData(`${endpoints.singers}/${id}`);
+  const container = document.querySelector(".details-wrapper");
+  container.style.display = "none";
+  console.log(container);
+  const { data, loading } = await getData(`${endpoints.singers}/${id}`);
 
+  if (!loading) {
+    container.style.display = "block";
+    const loader = this.documentElement.querySelector(".loader");
+    loader.style.display = "none";
+  }
   if (data) {
     deleteBtn.setAttribute("data-id", data.id);
     img.setAttribute("src", data.img);
@@ -40,7 +48,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     nationality.textContent = data.nationality;
     debutYear.textContent = data.debutYear;
     awardsWon.textContent = data.awardsWon;
-    labelCompany.textContent = data.labelCompany;
+    labelCompany.textContent = data.label;
     albums.textContent = data.albums;
     monthlyListeners.textContent = formatMonthlyListeners(
       data.monthlyListeners

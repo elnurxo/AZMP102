@@ -7,7 +7,9 @@ const singersWrapper = document.querySelector(".singers-wrapper");
 export function renderSingerCards(arr) {
   singersWrapper.innerHTML = "";
   if (arr.length === 0) {
-    singersWrapper.innerHTML = `<h2 class="title has-text-centered has-text-danger">Not Found Any Singer Data!</h2>`;
+    singersWrapper.innerHTML = `<div class="has-text-centered">
+    <h2 class="title has-text-centered has-text-danger">Not Found Any Singer Data!</h2>
+    </div>`;
   } else {
     arr.forEach((singer) => {
       singersWrapper.innerHTML += `
@@ -33,7 +35,7 @@ export function renderSingerCards(arr) {
                     <span>genre: ${singer.genre}</span> <br>
                     <span>nationality: ${singer.nationality}</span>
                     <br>
-                    <a role="button" href="detail.html?id=${singer.id}" class="button d-block mt-3 is-dark has-text-white"><i class="fa-solid fa-circle-info"></i></a>
+                    <a role="button" href="./detail.html?id=${singer.id}" class="button d-block mt-3 is-dark has-text-white"><i class="fa-solid fa-circle-info"></i></a>
                     <button class="button is-primary has-text-white mt-3"><i class="fa-solid fa-edit"></i></button>
                     <button data-id="${singer.id}" class="delete-btn button is-danger has-text-white mt-3"><i class="fa-solid fa-trash"></i></button>
                   </div>

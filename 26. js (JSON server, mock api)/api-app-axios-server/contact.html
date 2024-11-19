@@ -2,102 +2,101 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/7/71/Spotify.png">
-    <link rel="stylesheet" href="./node_modules/bulma/css/bulma.css" />
-    <link rel="stylesheet" href="./src/style/main.css">
-    <title>Music App | Contact Us</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/7/71/Spotify.png">
+  <link rel="stylesheet" href="./node_modules/bulma/css/bulma.css" />
+  <link rel="stylesheet" href="./src/style/main.css">
+  <title>Music App | Contact Us</title>
 </head>
 
 <body>
-    <header class="container">
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="https://spotify.com" target="_blank">
-                    <img width="30" height="80"
-                        src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green.png"
-                        alt="spotify logo">
-                </a>
+  <header class="container">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://spotify.com" target="_blank">
+          <img width="30" height="80"
+            src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green.png"
+            alt="spotify logo">
+        </a>
 
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                    data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a href="/index.html" class="navbar-item">
+            Home
+          </a>
+
+          <a href="/about.html" class="navbar-item">
+            About
+          </a>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              More
+            </a>
+
+            <div class="navbar-dropdown">
+              <a href="/contact.html" class="navbar-item">
+                Contact
+              </a>
+              <a href="/favorites.html" class="navbar-item">
+                Favorites
+              </a>
+              <a href="/add-singer.html" class="navbar-item">
+                Add Singer
+              </a>
+              <hr class="navbar-divider">
+              <a href="mailto:spotify-support@gmail.com" class="navbar-item">
+                Report an issue
+              </a>
             </div>
+          </div>
+        </div>
 
-            <div id="navbarBasicExample" class="navbar-menu">
-                <div class="navbar-start">
-                    <a href="index.html" class="navbar-item">
-                        Home
-                    </a>
-
-                    <a href="about.html" class="navbar-item">
-                        About
-                    </a>
-
-                    <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link">
-                            More
-                        </a>
-
-                        <div class="navbar-dropdown">
-                            <a href="contact.html" class="navbar-item">
-                                Contact
-                            </a>
-                            <a href="favorites.html" class="navbar-item">
-                                Favorites
-                            </a>
-                            <a href="add-singer.html" class="navbar-item">
-                                Add Singer
-                              </a>
-                            <hr class="navbar-divider">
-                            <a href="mailto:spotify-support@gmail.com" class="navbar-item">
-                                Report an issue
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <div class="buttons">
-                            <a href="register.html" class="button is-primary">
-                                <strong>Sign up</strong>
-                            </a>
-                            <a href="login.html" class="button is-light">
-                                Log in
-                            </a>
-                        </div>
-                    </div>
-                </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a href="/register.html" class="button is-primary">
+                <strong>Sign up</strong>
+              </a>
+              <a href="/login.html" class="button is-light">
+                Log in
+              </a>
             </div>
-        </nav>
-    </header>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
 
 
-    <main>
-        <section id="contact-us">
-            <div class="container mt-5">
-                <h1 class="title has-text-centered">Contact Us</h1>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.8828097141!2d-118.74138416377292!3d34.02003923553221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2saz!4v1731955030813!5m2!1sen!2saz"
-                    width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <form class="is-flex">
-                    <input type="email" name="email" class="input is-success" type="text"
-                        placeholder="enter your email for newsletter">
-                    <button type="submit" class="button is-dark ml-2">Subscribe</button>
-                </form>
-            </div>
-        </section>
-    </main>
+  <main>
+    <section id="contact-us">
+      <div class="container mt-5">
+        <h1 class="title has-text-centered">Contact Us</h1>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.8828097141!2d-118.74138416377292!3d34.02003923553221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2saz!4v1731955030813!5m2!1sen!2saz"
+          width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <form class="is-flex" id="contact-form">
+          <input required id="email" type="email" name="email" class="input is-success"
+            placeholder="enter your email for newsletter">
+          <button type="submit" class="button is-dark ml-2">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
 
 
-    <script type="module" src="./src/script/main.js"></script>
+  <script type="module" src="./src/script/contact.js"></script>
 </body>
 
 </html>
