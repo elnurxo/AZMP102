@@ -210,6 +210,20 @@
         "Chinese Democracy"
       ],
       "awardsWon": 18
+    },
+    {
+      "id": "4b6c",
+      "stageName": "Roya",
+      "realName": "Roya Eliyeva",
+      "age": 32,
+      "debutYear": 2019,
+      "img": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTp5tc-uHfYBl2muelMvjxUdpVerNf2O5VOGq-86DXolN7F1Wp1",
+      "awardsWon": "4",
+      "labelCompany": "Azerbaijan Records",
+      "genre": "Alternative,Classical,Folk",
+      "nationality": "Azerbaijani",
+      "albums": "album 1, album 2",
+      "monthlyListeners": 145300
     }
   ],
   "songs": []
