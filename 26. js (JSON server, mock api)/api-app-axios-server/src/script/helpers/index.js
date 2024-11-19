@@ -36,7 +36,7 @@ export function renderSingerCards(arr) {
                     <span>nationality: ${singer.nationality}</span>
                     <br>
                     <a role="button" href="./detail.html?id=${singer.id}" class="button d-block mt-3 is-dark has-text-white"><i class="fa-solid fa-circle-info"></i></a>
-                    <button class="button is-primary has-text-white mt-3"><i class="fa-solid fa-edit"></i></button>
+                    <a role="button" href="edit-singer.html?id=${singer.id}" class="button is-primary has-text-white mt-3"><i class="fa-solid fa-edit"></i></a>
                     <button data-id="${singer.id}" class="delete-btn button is-danger has-text-white mt-3"><i class="fa-solid fa-trash"></i></button>
                   </div>
                 </div>

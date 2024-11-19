@@ -20,6 +20,7 @@ const awardsWon = document.querySelector("#awards-won");
 const labelCompany = document.querySelector("#label-company");
 const albums = document.querySelector("#albums");
 const monthlyListeners = document.querySelector("#monthly-listeners");
+const updateLink = document.querySelector("#update-link");
 
 //delete button
 const deleteBtn = document.querySelector(".delete-btn");
@@ -36,6 +37,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     loader.style.display = "none";
   }
   if (data) {
+    updateLink.setAttribute("href", `edit-singer.html?id=${data.id}`);
     deleteBtn.setAttribute("data-id", data.id);
     img.setAttribute("src", data.img);
     img.setAttribute("title", data.stageName);

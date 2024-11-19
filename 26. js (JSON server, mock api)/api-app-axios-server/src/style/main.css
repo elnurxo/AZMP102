@@ -83,6 +83,32 @@
 .cover-image {
   object-fit: cover;
 }
+.card {
+  cursor: pointer;
+}
+.card .title {
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+.card:hover .title {
+  color: hsl(141, 71%, 35%);
+}
+
+.heart {
+  display: inline-block;
+  animation: beat 1s infinite;
+  transform-origin: center;
+}
+
+@keyframes beat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
 
 @keyframes rotation {
   0% {
@@ -105,7 +131,7 @@
     width: 100% !important;
     margin: 0 !important;
   }
-  .search-and-sort .icon{
+  .search-and-sort .icon {
     margin-left: 14px !important;
   }
 }
