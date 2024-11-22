@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "outDir": "./script/js", // Output JavaScript files here
+    "rootDir": "./script/ts", // Input TypeScript files from here
+    "target": "ES6", // JavaScript version
+    "module": "CommonJS", // Module system
+    "strict": true, // Enable strict type checking
+    "esModuleInterop": true, // Allow ES module imports
+    "skipLibCheck": true // Skip library checking for faster builds
+  },
+  "include": ["script/ts/**/*"], // Include all TypeScript files
+  "exclude": ["node_modules"] // Exclude unnecessary files
+}

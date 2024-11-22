@@ -83,10 +83,10 @@
       <div class="container">
         <h1 class="title has-text-centered">Create an account and start to explore!</h1>
         <hr>
-        <form class="column is-5" style="margin: 14px auto;" id="register-form">
+        <form enctype="multipart/form-data" class="column is-5" style="margin: 14px auto;" id="register-form">
           <div class="field">
             <p class="control has-icons-left has-icons-right">
-              <input class="input" type="text" placeholder="Username">
+              <input id="username" required class="input" type="text" placeholder="Username">
               <span class="icon is-small is-left">
                 <i class="fas fa-user"></i>
               </span>
@@ -94,7 +94,7 @@
           </div>
           <div class="field">
             <p class="control has-icons-left has-icons-right">
-              <input class="input" type="email" placeholder="Email">
+              <input id="email" required class="input" type="email" placeholder="Email">
               <span class="icon is-small is-left">
                 <i class="fas fa-envelope"></i>
               </span>
@@ -102,7 +102,7 @@
           </div>
           <div class="field">
             <p class="control has-icons-left">
-              <input class="input" type="password" placeholder="Password">
+              <input id="pass" required class="input" type="password" placeholder="Password">
               <span class="icon is-small is-left">
                 <i class="fas fa-lock"></i>
               </span>
@@ -110,7 +110,7 @@
           </div>
           <div class="field">
             <p class="control has-icons-left">
-              <input class="input" type="password" placeholder="Confirm Password">
+              <input id="confirm-pass" required class="input" type="password" placeholder="Confirm Password">
               <span class="icon is-small is-left">
                 <i class="fas fa-lock"></i>
               </span>
@@ -118,20 +118,20 @@
           </div>
           <div class="file has-name">
             <label class="file-label">
-              <input class="file-input" type="file" name="profile" />
+              <input required id="profile-picture" class="file-input" type="file" name="profile" />
               <span class="file-cta">
                 <span class="file-icon">
                   <i class="fas fa-upload"></i>
                 </span>
                 <span class="file-label"> Choose profile picture</span>
               </span>
-              <span class="file-name">example.jpg</span>
+              <span id="file-name" class="file-name">example.jpg</span>
             </label>
           </div>
           <div class="field">
             <div class="control">
               <label class="checkbox">
-                <input type="checkbox">
+                <input id="accept-terms-of-use" type="checkbox">
                 I agree to the <a class="has-text-success has-text-weight-bold" href="https://spotify.com"
                   target="_blank">terms and conditions</a>
               </label>
@@ -139,7 +139,7 @@
           </div>
           <div class="field">
             <p class="control is-flex is-justify-content-center">
-              <button style="width: 100%;" class="has-text-white button is-success">
+              <button id="register-btn" style="width: 100%;" class="has-text-white button is-success">
                 Register
               </button>
             </p>
@@ -151,7 +151,7 @@
   </main>
 
 
-  <script type="module" src="./src/script/main.js"></script>
+  <script type="module" src="./src/script/register.js"></script>
 </body>
 
 </html>
