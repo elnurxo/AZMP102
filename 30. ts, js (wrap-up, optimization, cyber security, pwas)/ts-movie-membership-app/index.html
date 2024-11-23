@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="./src/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + TS</title>
+</head>
+
+<body>
+  <main>
+    <section id="movie">
+      <form class="mx-auto w-50 mt-1" id="add-movie-form">
+        <div class="d-flex gap-3 justify-content-center mb-4">
+          <div class="w-100">
+            <label class="fw-bold" for="title">Movie Title</label>
+            <input class="form-control w-100" placeholder="enter movie title" id="title" type="text" name="title"
+              required>
+          </div>
+          <div class="w-100">
+            <label class="fw-bold w-100" for="director">Director Name</label>
+            <input placeholder="enter director name" id="director" type="text" name="director" class="form-control"
+              required>
+          </div>
+        </div>
+        <div class="d-flex gap-3">
+          <div class="w-100">
+            <label class="fw-bold" for="year">Movie Release Year</label>
+            <input placeholder="enter movie release year" id="year" type="number" min="1800" max="2024" name="year"
+              class="form-control" required>
+          </div>
+          <div class="w-100">
+            <label class=" fw-bold" for="genre">Movie Genre</label>
+            <select id="genre-select" class="form-select">
+            </select>
+          </div>
+        </div>
+        <button disabled type="submit" class="add-btn btn btn-outline-danger mt-3 d-block mx-auto w-25">add
+          movie</button>
+      </form>
+
+      <hr class="my-4 w-75 mx-auto">
+      <h4 class="text-center mt-2">Movies</h4>
+      <input placeholder="search for movie..." id="search" type="text" class="form-control w-25 mx-auto d-block">
+      <select name="year" id="sort-by-year" class="form-select w-25 mx-auto mt-2">
+        <option value="" disabled selected>sort movies by year</option>
+        <option value="from-oldest">from oldest</option>
+        <option value="from-newest">from newest</option>
+      </select>
+      <ul class="list-group movies-list w-50 mx-auto mt-2">
+      </ul>
+
+      <hr class="my-4 w-75 mx-auto">
+      <h4 class="text-center mt-2">Premium Members</h4>
+      <ul class="list-group premium-user-list w-50 mx-auto mt-2">
+      </ul>
+
+      <hr class="my-4 w-75 mx-auto">
+      <h4 class="text-center mt-2">Fetch Data</h4>
+      <button class="btn btn-outline-success d-block mx-auto w-25 mb-5" id="get-data">get users</button>
+    </section>
+  </main>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
