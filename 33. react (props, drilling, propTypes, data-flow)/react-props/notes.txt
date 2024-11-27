@@ -1,0 +1,5 @@
+props, props-drilling, data flow, children props, propTypes +
+handling events in react +
+useEffect, fetch, axios, component lifecycle *
+
+useRef, useForward -
