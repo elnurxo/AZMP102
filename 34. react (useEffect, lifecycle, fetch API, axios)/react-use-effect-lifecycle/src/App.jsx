@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -30,26 +30,22 @@ function App() {
     document.body.style.color = darkMode ? "white" : "black";
   }, [darkMode]);
 
-  // Sorting users based on selected order and filtering by searchTerm
-  const sortedUsers = useMemo(() => {
-    return [...users]
-      .filter((user) =>
-        user.name.toLowerCase().includes(searchTerm.toLowerCase().trim())
-      )
-      .sort((a, b) => {
-        const nameA = a.name.toLowerCase();
-        const nameB = b.name.toLowerCase();
-        if (sortOrder === "asc") {
-          return nameA < nameB ? -1 : 1;
-        } else {
-          return nameA > nameB ? -1 : 1;
-        }
-      });
-  }, [users, searchTerm, sortOrder]); // Recalculate only when relevant state changes
+  // Sorting users based on selected order
+  const sortedUsers = [...users]
+    .filter((user) =>
+      user.name.toLowerCase().includes(searchTerm.toLowerCase().trim())
+    )
+    .sort((a, b) => {
+      const nameA = a.name.toLowerCase();
+      const nameB = b.name.toLowerCase();
+      if (sortOrder === "asc") {
+        return nameA < nameB ? -1 : 1;
+      } else {
+        return nameA > nameB ? -1 : 1;
+      }
+    });
 
-  useEffect(() => {
-    console.log("sorted users: ", sortedUsers);
-  }, [sortedUsers]);
+  console.log("sorted users renders again when another state changes: ", sortedUsers);
 
   return (
     <>
@@ -86,7 +82,7 @@ function App() {
       </select>
 
       <ul>
-        {sortedUsers && sortedUsers.map((user) => (
+        {sortedUsers.map((user) => (
           <li key={user.id}>{user.name}</li>
         ))}
       </ul>
