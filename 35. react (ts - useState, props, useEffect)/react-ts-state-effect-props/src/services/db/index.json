@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "twix",
+      "price": 3.5,
+      "isDiscounted": true
+    },
+    {
+      "id": 2,
+      "name": "snickers",
+      "price": 2,
+      "isDiscounted": false
+    },
+    {
+      "id": 3,
+      "name": "M&Ms",
+      "price": 2.4,
+      "isDiscounted": true
+    },
+    {
+      "id": 4,
+      "name": "Skittles",
+      "price": 1,
+      "isDiscounted": false
+    },
+    {
+      "id": 5,
+      "name": "Bounty",
+      "price": 1.5,
+      "isDiscounted": false
+    }
+  ]
+}

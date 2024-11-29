@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -9,19 +10,18 @@ function App() {
 
   // Fetching data once when component mounts
   useEffect(() => {
-    const fetchUsers = async () => {
+    const axiosUsers = async () => {
       try {
-        const response = await fetch(
+        const response = await axios.get(
           "https://jsonplaceholder.typicode.com/users"
         );
-        const data = await response.json();
-        console.log("API data fetched:", data);
-        setUsers(data);
+        const axiosResult = await response;
+        setUsers([...axiosResult.data]);
       } catch (error) {
         console.error("Failed to fetch users:", error);
       }
     };
-    fetchUsers();
+    axiosUsers();
   }, []);
 
   // Dark mode effect
@@ -45,7 +45,10 @@ function App() {
       }
     });
 
-  console.log("sorted users renders again when another state changes: ", sortedUsers);
+  console.log(
+    "sorted users renders again when another state changes: ",
+    sortedUsers
+  );
 
   return (
     <>
