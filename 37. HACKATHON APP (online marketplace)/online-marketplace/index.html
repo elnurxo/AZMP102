@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- tailwind cdn -->
+  <script defer src="https://cdn.tailwindcss.com"></script>
+  <!-- font awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <!-- main css -->
+  <link rel="stylesheet" href="./src/main.css">
+  <title>Online MarketPlace</title>
+</head>
+
+<body>
+  <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
+    <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
+      <a href="#" class="flex items-center">
+        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Online MarketPlace</span>
+      </a>
+      <div class="flex items-center lg:order-2">
+        <div class="hidden mt-2 mr-4 sm:inline-block">
+          <span></span>
+        </div>
+
+        <a href="./src/pages/login.html"
+          class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-2 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800">Sign
+          In</a>
+        <a href="./src/pages/register.html"
+          class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800">Sign
+          Up</a>
+        <button data-collapse-toggle="mobile-menu-2" type="button"
+          class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="mobile-menu-2" aria-expanded="true">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+          </svg>
+          <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="items-center justify-between w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+        <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+          <li>
+            <a href="index.html"
+              class="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white"
+              aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="./src/pages/products.html"
+              class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Products</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="max-w-5xl mx-auto mt-12 px-4 text-center">
+      <div class="w-full max-w-3xl mx-auto">
+        <h1 class="text-4xl font-bold mt-2 mb-6">Helping you find your new home;<br>by simplifying the search.</h1>
+        <p class="px-4 leading-relaxed">Propiti provides you with a quick, simple way to reach multiple estate
+          agents.<br>Allowing you to spend less time trawling through property portals,<br>giving you more time on the
+          other things you enjoy.
+        </p>
+        <p class="mb-8 mt-4 px-4 leading-relaxed">Oh, and the best bit...
+          <span class="text-pink-600 font-bold">It's free!</span>
+        </p>
+        <div>
+          <a class="inline-block py-4 px-8 leading-none text-white bg-slate-800 hover:bg-pink-600 rounded shadow text-sm font-bold"
+            href="/signup">Sign-up for free</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

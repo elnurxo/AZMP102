@@ -1,0 +1,13 @@
+react styling
+MUI
+hooks - useMemo, useCallback, useRef, useForward
+
+
+----------------------
+1. inline css +
+2. global css +
+3. module css + (clsx)
+4. css objects (css in js) +
+4. styled component +
+5. css framework (Tailwind css, MUI, Antd, Chakra UI, R-Bootstrap, Bulma)
+6. scss (node-sass)

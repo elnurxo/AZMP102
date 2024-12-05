@@ -1,0 +1,157 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Leyla Hasanova",
+      "email": "leyla.hasanova@example.com",
+      "password": "SecurePass123",
+      "address": "Baku, Azerbaijan",
+      "createdAt": "2024-12-01T08:00:00Z",
+      "profileImage": "user1.jpg",
+      "isSeller": true,
+      "basketItems": []
+    },
+    {
+      "id": 2,
+      "name": "Samir Karimov",
+      "email": "samir.karimov@example.com",
+      "password": "MyPassword456",
+      "address": "Ganja, Azerbaijan",
+      "createdAt": "2024-12-02T10:00:00Z",
+      "profileImage": "user2.jpg",
+      "isSeller": false,
+      "basketItems": [
+        {
+          "productId": 3,
+          "quantity": 2,
+          "totalPrice": 90
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Aysel Mammadova",
+      "email": "aysel.mammadova@example.com",
+      "password": "StrongPass789",
+      "address": "Sumqayit, Azerbaijan",
+      "createdAt": "2024-12-03T11:30:00Z",
+      "profileImage": "user3.jpg",
+      "isSeller": true,
+      "basketItems": []
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "Wireless Headphones",
+      "description": "High-quality noise-canceling wireless headphones.",
+      "price": 150,
+      "category": "Electronics",
+      "sellerId": 1,
+      "createdAt": "2024-12-01T09:00:00Z",
+      "image": "https://media.wired.com/photos/66abec9ccb172c2e5de763bf/master/w_960,c_limit/Edifier-Stax-Spirit-S5-Headphones-Offwhite-Background-SOURCE-Amazon.jpg",
+      "rating": 4.5,
+      "reviews": [
+        {
+          "userId": 2,
+          "comment": "Amazing sound quality!",
+          "rating": 5
+        }
+      ],
+      "stock": 10
+    },
+    {
+      "id": 2,
+      "title": "Leather Wallet",
+      "description": "Stylish and durable genuine leather wallet.",
+      "price": 30,
+      "category": "Accessories",
+      "sellerId": 1,
+      "createdAt": "2024-12-01T09:30:00Z",
+      "image": "https://cdn-images.farfetch-contents.com/19/61/39/74/19613974_43782310_600.jpg",
+      "rating": 4.2,
+      "reviews": [],
+      "stock": 25
+    },
+    {
+      "id": 3,
+      "title": "Gaming Mouse",
+      "description": "Ergonomic gaming mouse with customizable DPI settings.",
+      "price": 45,
+      "category": "Electronics",
+      "sellerId": 3,
+      "createdAt": "2024-11-30T12:00:00Z",
+      "image": "https://img.drz.lazcdn.com/static/np/p/e3e4c976b3758b2cfd2ec77e3b7b524a.jpg_720x720q80.jpg",
+      "rating": 4.8,
+      "reviews": [],
+      "stock": 15
+    },
+    {
+      "id": 4,
+      "title": "Yoga Mat",
+      "description": "Eco-friendly, non-slip yoga mat for workouts.",
+      "price": 20,
+      "category": "Sports",
+      "sellerId": 3,
+      "createdAt": "2024-12-04T08:45:00Z",
+      "image": "https://www.niviasports.com/cdn/shop/files/1_f74628ac-df66-4c71-b112-fd8253ce175a.jpg?v=1716799881",
+      "rating": 4.6,
+      "reviews": [],
+      "stock": 50
+    },
+    {
+      "id": 5,
+      "title": "Smartphone Case",
+      "description": "Durable and stylish smartphone case with shock absorption.",
+      "price": 15,
+      "category": "Accessories",
+      "sellerId": 1,
+      "createdAt": "2024-12-01T14:15:00Z",
+      "image": "https://cdn.thewirecutter.com/wp-content/media/2024/10/iphone-case-2048px-3456.jpg?auto=webp&quality=75&width=1024",
+      "rating": 4.0,
+      "reviews": [],
+      "stock": 40
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userId": 2,
+      "products": [
+        {
+          "productId": 1,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 150,
+      "orderedAt": "2024-12-02T14:00:00Z",
+      "status": "Delivered"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Electronics"
+    },
+    {
+      "id": 2,
+      "name": "Accessories"
+    },
+    {
+      "id": 3,
+      "name": "Clothing"
+    },
+    {
+      "id": 4,
+      "name": "Sports"
+    },
+    {
+      "id": 5,
+      "name": "Home & Kitchen"
+    },
+    {
+      "id": 6,
+      "name": "Books"
+    }
+  ]
+}
