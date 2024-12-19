@@ -1,0 +1,184 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "role": "admin",
+      "email": "admin@example.com",
+      "password": "hashedpassword",
+      "createdAt": "2023-01-01T12:00:00Z",
+      "updatedAt": "2023-12-01T12:00:00Z",
+      "basket": []
+    },
+    {
+      "id": "2",
+      "username": "john_doe",
+      "role": "client",
+      "email": "john@example.com",
+      "password": "hashedpassword",
+      "createdAt": "2023-05-12T11:30:00Z",
+      "updatedAt": "2023-12-01T12:00:00Z",
+      "basket": [
+        {
+          "productId": 1,
+          "quantity": 1
+        },
+        {
+          "productId": 2,
+          "quantity": 2
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Smartphone",
+      "categoryId": "1",
+      "costPrice": 250,
+      "salePrice": 279.99,
+      "discountPercentage": 0,
+      "stock": 37,
+      "createdAt": "2024-12-18T19:21:12.095Z",
+      "updatedAt": "2024-12-18T19:21:12.095Z",
+      "imageUrl": "https://cdn.thewirecutter.com/wp-content/media/2024/09/iphone-2048px-6979.jpg?auto=webp&quality=75&width=1024",
+      "reviews": []
+    },
+    {
+      "id": "2",
+      "name": "Laptop",
+      "categoryId": "1",
+      "costPrice": 850,
+      "salePrice": 929.99,
+      "discountPercentage": 10,
+      "stock": 49,
+      "createdAt": "2024-12-18T19:21:16.720Z",
+      "updatedAt": "2024-12-18T19:21:16.720Z",
+      "imageUrl": "https://cdn.thewirecutter.com/wp-content/media/2024/07/laptopsunder500-2048px-5452.jpg?auto=webp&quality=75&width=1024",
+      "reviews": [
+        {
+          "id": "1",
+          "userId": "2",
+          "rating": 5,
+          "review": "Çox yaxşı məhsuldur."
+        },
+        {
+          "id": "1",
+          "userId": "2",
+          "rating": 1,
+          "review": "Pisdir."
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Electronics"
+    },
+    {
+      "id": "2",
+      "name": "Clothing"
+    },
+    {
+      "id": "3",
+      "name": "Home Appliances"
+    },
+    {
+      "id": "4",
+      "name": "Furniture"
+    },
+    {
+      "id": "5",
+      "name": "Sports & Outdoors"
+    },
+    {
+      "id": "6",
+      "name": "Beauty & Health"
+    },
+    {
+      "id": "7",
+      "name": "Toys & Games"
+    },
+    {
+      "id": "8",
+      "name": "Books"
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "userId": 2,
+      "orderDate": "2023-12-02T12:00:00Z",
+      "status": "Shipped",
+      "totalPrice": 559.98,
+      "products": [
+        {
+          "productId": 1,
+          "quantity": 2,
+          "price": 279.99
+        }
+      ]
+    }
+  ],
+  "messages": [
+    {
+      "id": "1",
+      "email": "johndoe@example.com",
+      "phoneNumber": "+99450223344",
+      "subject": "Məhsul sualı",
+      "message": "Smartphone haqqında sualım var.",
+      "createdAt": "2023-12-01T14:00:00Z"
+    },
+    {
+      "id": "fa2e",
+      "email": "elnur.khalilov@code.edu.az",
+      "phoneNumber": "+994 55 475 30 75",
+      "subject": "Şikayət",
+      "message": "çatdırılma gec olur",
+      "createdAt": "2024-12-18T17:39:17.357Z"
+    },
+    {
+      "id": "890f",
+      "email": "elnur.khalilov@code.edu.az",
+      "phoneNumber": "+994 55 475 30 75",
+      "subject": "AZMP102",
+      "message": "salam",
+      "createdAt": "2024-12-19T04:33:33.591Z"
+    },
+    {
+      "id": "zhxnwGT_dwSkvRqneCfY_",
+      "email": "elnur.khalilov@code.edu.az",
+      "phoneNumber": "+994 55 475 30 75",
+      "subject": "Complaint ",
+      "message": "hey there",
+      "createdAt": "2024-12-19T04:56:29.859Z"
+    },
+    {
+      "id": "whgbVwNzm20lWzUMJ24iF",
+      "email": "admin@admin.com",
+      "phoneNumber": "+994 55 475 30 75",
+      "subject": "Test Formik",
+      "message": "hey formik",
+      "createdAt": "2024-12-19T05:43:52.004Z"
+    },
+    {
+      "id": "9OSaIHGOspKcMASQJVEcQ",
+      "email": "elnur.khalilov@code.edu.az",
+      "phoneNumber": "+994 55 475 30 75",
+      "subject": "Complaint ",
+      "message": "salam",
+      "createdAt": "2024-12-19T06:18:18.725Z"
+    }
+  ],
+  "coupons": [
+    {
+      "id": "1",
+      "code": "SUMMER21",
+      "discountPercentage": 15,
+      "expirationDate": "2023-12-31T23:59:59Z",
+      "usageCount": 100
+    }
+  ],
+  "sliders": []
+}

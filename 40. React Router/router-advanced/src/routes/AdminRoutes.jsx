@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import AdminLayout from "../components/admin/AdminLayout";
 import Dashboard from "../pages/admin/Dashboard";
-import AddProduct from "../pages/admin/AddProduct";
+import Products from "../pages/admin/Products";
 import ProtectedRoute from "./ProtectedRoute";
 import AdminLogin from "../pages/auth/AdminLogin";
 
@@ -17,7 +17,7 @@ const AdminRoutes = () => {
         }
       >
         <Route index element={<Dashboard />} />
-        <Route path="add-product" element={<AddProduct />} />
+        <Route path="products" element={<Products />} />
       </Route>
       <Route path="/login" element={<AdminLogin />} />
     </Routes>

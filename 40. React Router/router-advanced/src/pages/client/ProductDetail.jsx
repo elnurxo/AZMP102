@@ -1,7 +1,9 @@
 
 const ProductDetail = () => {
   return (
-    <div>ProductDetail</div>
+    <>
+     <h2 style={{ textAlign: "center", marginTop: "14px" }}>Product Detail</h2>
+    </>
   )
 }
 
