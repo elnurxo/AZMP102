@@ -7,4 +7,5 @@ export const ENDPOINTS = {
   categories: "/categories",
   coupons: "/coupons",
   messages: "/messages",
+  sliders: "/sliders",
 };

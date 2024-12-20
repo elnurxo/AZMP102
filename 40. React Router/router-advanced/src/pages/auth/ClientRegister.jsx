@@ -5,52 +5,103 @@ import {
   Typography,
   Box,
   Paper,
-  Alert,
 } from "@mui/material";
-import { useState } from "react";
+import { useFormik } from "formik";
+import { Link, useNavigate } from "react-router";
+import clientRegisterSchema from "../../validations/client.register.validation";
+import User from "../../classes/User";
+import controller from "../../services/api/api";
+import { ENDPOINTS } from "../../constants";
+import { toast } from "react-toastify";
+import { useEffect } from "react";
+import { useAuth } from "../../hooks/useAuth";
 
 const ClientRegister = () => {
-  const [formData, setFormData] = useState({
-    username: "",
-    email: "",
-    password: "",
-  });
+  const navigate = useNavigate();
+  const { isAuthenticated } = useAuth();
 
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState(false);
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleRegister = (event) => {
-    event.preventDefault();
-
-    // Example validation logic
-    if (!formData.username || !formData.email || !formData.password) {
-      setError("All fields are required.");
-      return;
+  //check user log in
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate("/");
     }
+  }, [isAuthenticated, navigate]);
 
-    if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      setError("Invalid email format.");
-      return;
-    }
-
-    setError("");
-    setSuccess(true);
-
-    // Submit logic here
-    console.log("Registration Data:", formData);
-
-    // Reset form (optional)
-    setFormData({
+  const formik = useFormik({
+    initialValues: {
       username: "",
       email: "",
       password: "",
-    });
-  };
+      confirmPassword: "",
+    },
+    onSubmit: async (values, actions) => {
+      const newUser = new User(values.username, values.email, values.password);
+      try {
+        const users = await controller.getAll(`${ENDPOINTS.users}?role=client`);
+        const duplicateUsername = users.find(
+          (x) => x.username === newUser.username
+        );
+        const duplicateEmail = users.find((x) => x.email === newUser.email);
+        if (!duplicateUsername && !duplicateEmail) {
+          await controller.post(ENDPOINTS.users, newUser);
+          toast.success("Successfully registered!", {
+            position: "top-right",
+            autoClose: 2400,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "colored",
+          });
+          actions.resetForm();
+          setTimeout(() => {
+            navigate("/login");
+          }, 300);
+          return;
+        }
+        if (duplicateUsername) {
+          toast.error("username already taken!", {
+            position: "top-right",
+            autoClose: 2400,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "colored",
+          });
+          formik.values.username = "";
+          return;
+        }
+        if (duplicateEmail) {
+          toast.error("email already taken!", {
+            position: "top-right",
+            autoClose: 2400,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "colored",
+          });
+          formik.values.email = "";
+          return;
+        }
+      } catch (error) {
+        console.error("error: ", error);
+        toast.error("Failed to register, try again!", {
+          position: "top-right",
+          autoClose: 2400,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          theme: "colored",
+        });
+        actions.resetForm();
+        return;
+      }
+    },
+    validationSchema: clientRegisterSchema,
+  });
 
   return (
     <Container
@@ -59,7 +110,7 @@ const ClientRegister = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        height: "70vh",
+        height: "90vh",
       }}
     >
       <Paper
@@ -83,16 +134,9 @@ const ClientRegister = () => {
           Join us today!
         </Typography>
 
-        {error && <Alert severity="error">{error}</Alert>}
-        {success && (
-          <Alert severity="success">
-            Registration successful! You can now log in.
-          </Alert>
-        )}
-
         <Box
           component="form"
-          onSubmit={handleRegister}
+          onSubmit={formik.handleSubmit}
           sx={{
             display: "flex",
             flexDirection: "column",
@@ -101,38 +145,79 @@ const ClientRegister = () => {
         >
           <TextField
             label="Username"
-            name="username"
             variant="outlined"
             fullWidth
             required
-            value={formData.username}
-            onChange={handleInputChange}
+            id="username"
+            name="username"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.username}
+            helperText={
+              formik.touched.username &&
+              formik.errors.username &&
+              formik.errors.username
+            }
           />
           <TextField
             label="Email Address"
-            name="email"
             variant="outlined"
             fullWidth
             required
             type="email"
-            value={formData.email}
-            onChange={handleInputChange}
+            id="email"
+            name="email"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.email}
+            helperText={
+              formik.touched.email && formik.errors.email && formik.errors.email
+            }
           />
           <TextField
             label="Password"
-            name="password"
             variant="outlined"
             fullWidth
             required
             type="password"
-            value={formData.password}
-            onChange={handleInputChange}
+            id="password"
+            name="password"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.password}
+            helperText={
+              formik.touched.password &&
+              formik.errors.password &&
+              formik.errors.password
+            }
+          />
+          <TextField
+            label="Confirm Password"
+            variant="outlined"
+            fullWidth
+            required
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.confirmPassword}
+            helperText={
+              formik.touched.confirmPassword &&
+              formik.errors.confirmPassword &&
+              formik.errors.confirmPassword
+            }
           />
           <Button
             type="submit"
             variant="contained"
             color="primary"
             size="large"
+            disabled={
+              !formik.dirty ||
+              formik.isSubmitting ||
+              Object.keys(formik.errors).length > 0
+            }
             fullWidth
           >
             Register
@@ -146,7 +231,7 @@ const ClientRegister = () => {
         >
           Already have an account?{" "}
           <Button variant="text" size="small" color="primary">
-            Login
+            <Link to={"/login"}>Login</Link>
           </Button>
         </Typography>
       </Paper>

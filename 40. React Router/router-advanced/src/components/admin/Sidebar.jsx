@@ -5,6 +5,13 @@ import {
   DashboardOutlined,
   ShoppingCartOutlined,
   LogoutOutlined,
+  ShoppingOutlined,
+  SlidersOutlined,
+  MessageOutlined,
+  GiftOutlined,
+  UsergroupAddOutlined,
+  ProfileOutlined,
+  AppstoreOutlined,
 } from "@ant-design/icons";
 import { Layout, Menu, Button, Modal } from "antd";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
@@ -49,6 +56,41 @@ const Sidebar = () => {
     },
     {
       key: "3",
+      icon: <ShoppingOutlined />,
+      label: <NavLink to="/admin/orders">Orders</NavLink>,
+    },
+    {
+      key: "4",
+      icon: <SlidersOutlined />,
+      label: <NavLink to="/admin/sliders">Sliders</NavLink>,
+    },
+    {
+      key: "5",
+      icon: <MessageOutlined />,
+      label: <NavLink to="/admin/messages">Messages</NavLink>,
+    },
+    {
+      key: "6",
+      icon: <GiftOutlined />,
+      label: <NavLink to="/admin/coupons">Coupons</NavLink>,
+    },
+    {
+      key: "7",
+      icon: <UsergroupAddOutlined />,
+      label: <NavLink to="/admin/users">Users</NavLink>,
+    },
+    {
+      key: "8",
+      icon: <ProfileOutlined />,
+      label: <NavLink to="/admin/categories">Categories</NavLink>,
+    },
+    {
+      key: "9",
+      icon: <AppstoreOutlined />,
+      label: <NavLink to="/">Client Side</NavLink>,
+    },
+    {
+      key: "10",
       icon: <LogoutOutlined />,
       label: "Logout",
       onClick: showLogoutModal,

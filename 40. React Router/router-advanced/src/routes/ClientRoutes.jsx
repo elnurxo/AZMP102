@@ -8,6 +8,7 @@ import NotFound from "../pages/client/NotFound";
 import Contact from "../pages/client/Contact";
 import ClientLogin from "../pages/auth/ClientLogin";
 import ClientRegister from "../pages/auth/ClientRegister";
+import User from "../pages/client/User";
 
 const ClientRoutes = () => {
   return (
@@ -20,6 +21,7 @@ const ClientRoutes = () => {
         <Route path="contact" element={<Contact />} />
         <Route path="login" element={<ClientLogin />} />
         <Route path="register" element={<ClientRegister />} />
+        <Route path="user" element={<User />} />
       </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>

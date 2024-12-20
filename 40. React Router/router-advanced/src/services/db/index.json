@@ -18,6 +18,8 @@
       "password": "hashedpassword",
       "createdAt": "2023-05-12T11:30:00Z",
       "updatedAt": "2023-12-01T12:00:00Z",
+      "profileImage": "https://i.pinimg.com/736x/06/3b/bf/063bbf0665eaf9c1730bccdc5c8af1b2.jpg",
+      "balance": 100,
       "basket": [
         {
           "productId": 1,
@@ -180,5 +182,26 @@
       "usageCount": 100
     }
   ],
-  "sliders": []
+  "sliders": [
+    {
+      "id": "1",
+      "imageURL": "https://poweradspy.com/wp-content/uploads/2023/10/nike-ads-growth.webp",
+      "title": "Nike"
+    },
+    {
+      "id": "2",
+      "imageURL": "https://www.designyourway.net/blog/wp-content/uploads/2017/12/alliornothing.jpg",
+      "title": "Adidas"
+    },
+    {
+      "id": "3",
+      "imageURL": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/c4b04016042649.562a4d9b7c9ba.png",
+      "title": "North Face"
+    },
+    {
+      "id": "4",
+      "imageURL": "https://i.insider.com/55daf684bd86ef14008b54ba?width=750&format=jpeg&auto=webp",
+      "title": "Under Armour"
+    }
+  ]
 }
