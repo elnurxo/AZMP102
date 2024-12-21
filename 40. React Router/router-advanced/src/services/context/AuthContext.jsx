@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
 import { createContext, useState, useEffect } from "react";
 import {
@@ -8,41 +9,49 @@ import {
 import controller from "../api/api.js";
 import { ENDPOINTS } from "../../constants/index.js";
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const AuthContext = createContext();
 
 const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true); // Track loading state
 
   useEffect(() => {
-    // Load user data from local storage on app load
     const getUser = async () => {
-      const storedUserId = getUserFromStorage();
-      if (storedUserId) {
-        const user = await controller.getOne(ENDPOINTS.users, storedUserId);
-        setUser(user);
-        setIsAuthenticated(true);
+      try {
+        const storedUserId = getUserFromStorage();
+        if (storedUserId) {
+          const user = await controller.getOne(ENDPOINTS.users, storedUserId);
+          setUser(user);
+          setIsAuthenticated(true);
+        }
+      } catch (error) {
+        console.error("Error loading user:", error);
+        setIsAuthenticated(false);
+      } finally {
+        setLoading(false); // Ensure loading state is always updated
       }
-      setLoading(false);
     };
     getUser();
   }, []);
 
   const login = async (userId) => {
-    const user = await controller.getOne(ENDPOINTS.users, userId);
-    if (user) {
-      setUser(user);
-      setIsAuthenticated(true);
-      saveUserToStorage(userId); // Save to local storage
+    try {
+      const user = await controller.getOne(ENDPOINTS.users, userId);
+      if (user) {
+        setUser(user);
+        setIsAuthenticated(true);
+        saveUserToStorage(userId);
+      }
+    } catch (error) {
+      console.error("Error during login:", error);
     }
   };
 
   const logout = () => {
     setUser(null);
     setIsAuthenticated(false);
-    removeUserFromStorage(); // Remove from local storage
+    removeUserFromStorage();
   };
 
   return (
