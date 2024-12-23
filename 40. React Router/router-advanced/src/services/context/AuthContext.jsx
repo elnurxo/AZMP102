@@ -56,7 +56,7 @@ const AuthContextProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ user, isAuthenticated, loading, login, logout }}
+      value={{ user, setUser, isAuthenticated, loading, login, logout }}
     >
       {children}
     </AuthContext.Provider>

@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { Autoplay, Pagination } from "swiper/modules";
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
   const [sliders, setSliders] = useState([]);
@@ -22,11 +23,13 @@ const Home = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Home Page</title>
+      </Helmet>
       <Swiper
-        style={{ width: "70%", height: "70vh",marginTop:'4%' }}
+        style={{ width: "70%", height: "70vh", marginTop: "4%" }}
         slidesPerView={1}
         spaceBetween={0}
-        loop={true}
         pagination={{
           clickable: true,
         }}
@@ -39,9 +42,9 @@ const Home = () => {
         className="mySwiper"
       >
         {sliders &&
-          sliders.map((slide) => {
+          sliders.map((slide, idx) => {
             return (
-              <SwiperSlide style={{ height: "100%" }} key={slide.slide}>
+              <SwiperSlide style={{ height: "100%" }} key={idx}>
                 <img
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
                   src={slide.imageURL}

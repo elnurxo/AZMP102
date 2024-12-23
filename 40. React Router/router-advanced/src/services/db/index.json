@@ -12,14 +12,15 @@
     },
     {
       "id": "2",
-      "username": "john_doe",
+      "username": "elnurxo",
       "role": "client",
-      "email": "john@example.com",
-      "password": "hashedpassword",
+      "email": "elnur@gmail.com",
+      "password": "Elnur123!",
       "createdAt": "2023-05-12T11:30:00Z",
       "updatedAt": "2023-12-01T12:00:00Z",
-      "profileImage": "https://i.pinimg.com/736x/06/3b/bf/063bbf0665eaf9c1730bccdc5c8af1b2.jpg",
-      "balance": 100,
+      "profileImage": "https://res.cloudinary.com/dlytnxzbx/image/upload/v1734951711/miles_morales_fan_art_2_leebri.jpg",
+      "profileImagePublicId": "miles_morales_fan_art_2_leebri",
+      "balance": 235,
       "basket": [
         {
           "productId": 1,
@@ -30,6 +31,19 @@
           "quantity": 2
         }
       ]
+    },
+    {
+      "id": "3",
+      "username": "selena",
+      "role": "client",
+      "email": "selena@example.com",
+      "password": "hashedpassword",
+      "createdAt": "2023-05-12T11:30:00Z",
+      "updatedAt": "2023-12-01T12:00:00Z",
+      "profileImage": "https://res.cloudinary.com/dlytnxzbx/image/upload/v1734949920/kick_ass_2_2013_jihsri.jpg",
+      "profileImagePublicId": "kick_ass_2_2013_jihsri",
+      "balance": 100,
+      "basket": []
     }
   ],
   "products": [
@@ -171,6 +185,14 @@
       "subject": "Complaint ",
       "message": "salam",
       "createdAt": "2024-12-19T06:18:18.725Z"
+    },
+    {
+      "id": "EG0am5c4Ti8XdqpIdCTHP",
+      "email": "elnur.khalilov@code.edu.az",
+      "phoneNumber": "+994 55 475 30 75",
+      "subject": "Complaint ",
+      "message": "hey there",
+      "createdAt": "2024-12-23T10:38:38.973Z"
     }
   ],
   "coupons": [
@@ -202,6 +224,21 @@
       "id": "4",
       "imageURL": "https://i.insider.com/55daf684bd86ef14008b54ba?width=750&format=jpeg&auto=webp",
       "title": "Under Armour"
+    },
+    {
+      "id": "5",
+      "imageURL": "https://marketingweek.imgix.net/content/uploads/2024/04/10103815/PUMA-FOREVER-FASTER_BRAND-CAMPAIGN_Jack-Grealish.jpg?auto=compress,format&q=60&w=736&h=414",
+      "title": "Puma"
+    },
+    {
+      "id": "6",
+      "imageURL": "https://images-prod.dazeddigital.com/900/azure/dazed-prod/1260/6/1266792.jpg",
+      "title": "New Balance"
+    },
+    {
+      "id": "7",
+      "imageURL": "https://www.glossy.co/wp-content/uploads/sites/4/2021/09/Grid-Image-.png",
+      "title": "GAP"
     }
   ]
 }

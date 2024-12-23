@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from 'react-helmet-async';
 import {
   TextField,
   Button,
@@ -49,96 +50,105 @@ const Contact = () => {
   });
 
   return (
-    <Container maxWidth="sm" sx={{ mt: 4 }}>
-      <Typography variant="h4" align="center" gutterBottom>
-        Contact Us
-      </Typography>
-
-      <Paper sx={{ p: 3 }}>
-        <Typography variant="h6" align="center" sx={{ mb: 2 }}>
-          Get in Touch
+    <>
+      <Helmet>
+        <title>Contact Page</title>
+      </Helmet>
+      <Container maxWidth="sm" sx={{ mt: 4 }}>
+        <Typography variant="h4" align="center" gutterBottom>
+          Contact Us
         </Typography>
 
-        <Box component="form" onSubmit={formik.handleSubmit}>
-          <TextField
-            label="Email"
-            variant="outlined"
-            fullWidth
-            name="email"
-            value={formik.values.email}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            sx={{ mb: 2 }}
-            helperText={
-              formik.errors.email && formik.touched.email && formik.errors.email
-            }
-          />
+        <Paper sx={{ p: 3 }}>
+          <Typography variant="h6" align="center" sx={{ mb: 2 }}>
+            Get in Touch
+          </Typography>
 
-          <TextField
-            label="Phone Number"
-            variant="outlined"
-            fullWidth
-            name="phoneNumber"
-            value={formik.values.phoneNumber}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            sx={{ mb: 2 }}
-            helperText={formik.errors.phoneNumber}
-          />
-          <TextField
-            label="Subject"
-            variant="outlined"
-            fullWidth
-            name="subject"
-            value={formik.values.subject}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            sx={{ mb: 2 }}
-            helperText={formik.errors.subject}
-          />
-          <TextField
-            label="Message"
-            variant="outlined"
-            fullWidth
-            name="message"
-            multiline
-            rows={4}
-            value={formik.values.message}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            helperText={formik.errors.message}
-            sx={{ mb: 2 }}
-          />
+          <Box component="form" onSubmit={formik.handleSubmit}>
+            <TextField
+              label="Email"
+              variant="outlined"
+              fullWidth
+              name="email"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              sx={{ mb: 2 }}
+              helperText={
+                formik.errors.email &&
+                formik.touched.email &&
+                formik.errors.email
+              }
+            />
 
-          <Button
-            type="submit"
-            variant="contained"
-            color={Object.keys(formik.errors).length > 0 ? "error" : "primary"}
-            fullWidth
-            disabled={
-              !formik.dirty ||
-              formik.isSubmitting ||
-              Object.keys(formik.errors).length > 0
-            }
-            sx={{ mb: 2 }}
-          >
-            {loading ? (
-              <CircularProgress size={24} color="secondary" />
-            ) : (
-              "Send Message"
-            )}
-          </Button>
-        </Box>
-      </Paper>
+            <TextField
+              label="Phone Number"
+              variant="outlined"
+              fullWidth
+              name="phoneNumber"
+              value={formik.values.phoneNumber}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              sx={{ mb: 2 }}
+              helperText={formik.errors.phoneNumber}
+            />
+            <TextField
+              label="Subject"
+              variant="outlined"
+              fullWidth
+              name="subject"
+              value={formik.values.subject}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              sx={{ mb: 2 }}
+              helperText={formik.errors.subject}
+            />
+            <TextField
+              label="Message"
+              variant="outlined"
+              fullWidth
+              name="message"
+              multiline
+              rows={4}
+              value={formik.values.message}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              helperText={formik.errors.message}
+              sx={{ mb: 2 }}
+            />
 
-      <Snackbar
-        open={openSnackbar}
-        autoHideDuration={3500}
-        onClose={() => setOpenSnackbar(false)}
-        message={snackbarMessage}
-        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-      />
-    </Container>
+            <Button
+              type="submit"
+              variant="contained"
+              color={
+                Object.keys(formik.errors).length > 0 ? "error" : "primary"
+              }
+              fullWidth
+              disabled={
+                !formik.dirty ||
+                formik.isSubmitting ||
+                Object.keys(formik.errors).length > 0
+              }
+              sx={{ mb: 2 }}
+            >
+              {loading ? (
+                <CircularProgress size={24} color="secondary" />
+              ) : (
+                "Send Message"
+              )}
+            </Button>
+          </Box>
+        </Paper>
+
+        <Snackbar
+          open={openSnackbar}
+          autoHideDuration={3500}
+          onClose={() => setOpenSnackbar(false)}
+          message={snackbarMessage}
+          anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+        />
+      </Container>
+    </>
   );
 };
 
