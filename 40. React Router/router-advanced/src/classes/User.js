@@ -12,6 +12,8 @@ class User {
     this.profileImage =
       "https://i.pinimg.com/736x/06/3b/bf/063bbf0665eaf9c1730bccdc5c8af1b2.jpg";
     this.role = "client";
+    this.profileImagePublicId = null;
+    this.isBanned = false;
     this.basket = [];
   }
 }

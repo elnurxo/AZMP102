@@ -20,6 +20,7 @@
       "updatedAt": "2023-12-01T12:00:00Z",
       "profileImage": "https://res.cloudinary.com/dlytnxzbx/image/upload/v1734951711/miles_morales_fan_art_2_leebri.jpg",
       "profileImagePublicId": "miles_morales_fan_art_2_leebri",
+      "isBanned": false,
       "balance": 235,
       "basket": [
         {
@@ -37,9 +38,10 @@
       "username": "selena",
       "role": "client",
       "email": "selena@example.com",
-      "password": "hashedpassword",
+      "password": "Selena123@",
       "createdAt": "2023-05-12T11:30:00Z",
       "updatedAt": "2023-12-01T12:00:00Z",
+      "isBanned": false,
       "profileImage": "https://res.cloudinary.com/dlytnxzbx/image/upload/v1734949920/kick_ass_2_2013_jihsri.jpg",
       "profileImagePublicId": "kick_ass_2_2013_jihsri",
       "balance": 100,
