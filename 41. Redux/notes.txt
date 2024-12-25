@@ -1,0 +1,19 @@
+Redux toolkit (thunk) (mobx, zustand) + 3
+i18n (multi-language) (bonus)
+react-query (tan stack) - api data caching (bonus)
+jest, unit testing (Testing)
+framer motion (animation) (bonus)
+markdown support (bonus)
+cloudinary (bonus)
+- - - - - - - - - - - - - - - - - - - - - -
+25 dec - Redux
+26 dec - Redux thunk (async), framer motion
+27 dec - react-query (bonus)
+28 dec - i18n (bonus)
+29 dec - unit testing, jest (bonus)
+- - - - - - - - - - - - - - - - - - - - - - 
+
+BACKEND - Node JS, express JS, MongoDB
+bonuses - architecture, cloudinary file upload, middlewares,
+multer, rate limit, relations in DB, jwt token, 
+oAuth (google authentication- passport js)

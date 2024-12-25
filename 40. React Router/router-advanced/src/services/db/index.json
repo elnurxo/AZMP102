@@ -21,7 +21,7 @@
       "profileImage": "https://res.cloudinary.com/dlytnxzbx/image/upload/v1734951711/miles_morales_fan_art_2_leebri.jpg",
       "profileImagePublicId": "miles_morales_fan_art_2_leebri",
       "isBanned": false,
-      "balance": 235,
+      "balance": 255,
       "basket": [
         {
           "productId": 1,
@@ -203,7 +203,8 @@
       "code": "SUMMER21",
       "discountPercentage": 15,
       "expirationDate": "2023-12-31T23:59:59Z",
-      "usageCount": 100
+      "usageCount": 100,
+      "usedUserIds": ["1"]
     }
   ],
   "sliders": [
