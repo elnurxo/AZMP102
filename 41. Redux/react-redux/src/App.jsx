@@ -1,13 +1,13 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import Todo from "./components/Todo";
+import Animals from "./components/Animals";
 
 function App() {
   return (
     <>
-      <h1>Redux Toolkit Todo App</h1>
+      <h1>Redux (RTKf) Toolkit Users App</h1>
       <Navbar />
-      <Todo />
+      <Animals />
     </>
   );
 }

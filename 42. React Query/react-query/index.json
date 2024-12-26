@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Absolut",
+      "price": 120
+    },
+    {
+      "id": "3",
+      "name": "Grey Goose",
+      "price": 200
+    },
+    {
+      "id": "4",
+      "name": "Belvedere",
+      "price": 180
+    },
+    {
+      "id": "6",
+      "name": "Ciroc",
+      "price": 250
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "john_doe",
+      "email": "johnathan@gmail.com",
+      "password": "hashedpassword"
+    }
+  ]
+}

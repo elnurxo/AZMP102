@@ -1,11 +1,11 @@
-import { useMemo } from "react";
-import { useSelector } from "react-redux";
+import { useGetAnimalsQuery } from "../features/animalApiSlice";
 
 const Navbar = () => {
-  const { todos } = useSelector((state) => state.todos);
-  const doneTodoCount = useMemo(() => {
-    return todos.filter((x) => x.completed).length;
-  }, [todos]);
+  const { data: animals } = useGetAnimalsQuery();
+  // const { todos } = useSelector((state) => state.todos);
+  // const doneTodoCount = useMemo(() => {
+  //   return todos.filter((x) => x.completed).length;
+  // }, [todos]);
   return (
     <>
       <ul>
@@ -18,7 +18,7 @@ const Navbar = () => {
         <li>
           <a href="#">Contact</a>
         </li>
-        <li>Completed Todos: {doneTodoCount}</li>
+        <li>Users Count: {animals && animals?.length}</li>
       </ul>
       <hr />
     </>
