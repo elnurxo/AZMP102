@@ -25,11 +25,7 @@ const sliderUpload = multer({
     if (mimeType && extName) {
       return cb(null, true);
     } else {
-      return cb(
-        new multer.MulterError(
-          "Only images are allowed with file types jpeg, jpg, png, gif"
-        )
-      );
+      return cb(new Error("Only images are allowed with file types jpeg, jpg, png, gif"));
     }
   },
 });
@@ -48,11 +44,7 @@ const productUpload = multer({
     if (mimeType && extName) {
       return cb(null, true);
     } else {
-      return cb(
-        new multer.MulterError(
-          "Only images are allowed with file types jpeg, jpg, png, gif"
-        )
-      );
+      return cb(new Error("Only images are allowed with file types jpeg, jpg, png, gif"));
     }
   },
 });
