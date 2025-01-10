@@ -2,8 +2,7 @@ const express = require("express");
 const path = require("path");
 const cors = require("cors");
 const productRouter = require("./routes/productRoutes");
-const categoryRouter = require("./routes/category");
-const sliderRouter = require("./routes/sliderRoutes");
+const categoryRouter = require("./routes/categoryRoutes");
 const authMiddleware = require("./middlewares/authMiddleware");
 const multerErrorHandling = require("./middlewares/multerErrorHandling");
 
@@ -30,9 +29,6 @@ const configureRoutes = () => {
 
   // Categories routes
   app.use("/api/categories", categoryRouter);
-
-  //Sliders routes
-  app.use("/api/sliders", sliderRouter);
 
   app.use(multerErrorHandling);
 };

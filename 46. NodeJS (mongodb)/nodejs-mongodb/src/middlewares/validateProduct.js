@@ -2,7 +2,7 @@ const validateProduct = (schema) => {
   return (req, res, next) => {
 
     if (req.file) {
-      req.body.image = "http://localhost:7070/uploads" + req.file.filename;
+      req.body.image = req.file.path;
     }
 
     const { error } = schema.validate(req.body, {

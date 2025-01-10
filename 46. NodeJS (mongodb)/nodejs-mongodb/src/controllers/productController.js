@@ -1,11 +1,10 @@
 const extractPublicId = require("../utils/extractPublicId");
 const { cloudinary } = require("../config/cloudinary");
-//Product Model MongoDB
 const Product = require("../models/products");
 const formattedObject = require("../utils/formatObject");
 const Category = require("../models/category");
 
-//Mongo DB +
+// MongoDB: Get all products
 const getAll = async (req, res) => {
   const { search, sort, page = 1, size } = req.query;
 
@@ -21,7 +20,8 @@ const getAll = async (req, res) => {
   })
     .sort({ [sortKey]: sortOrder === "asc" ? 1 : -1 })
     .limit(size ? size : totalCount)
-    .skip(size ? size * (page - 1) : 0);
+    .skip(size ? size * (page - 1) : 0)
+    .populate("category", "name");
 
   if (filteredProducts.length === 0) {
     res.status(404).json({
@@ -41,7 +41,7 @@ const getAll = async (req, res) => {
   }
 };
 
-//Mongo DB +
+// MongoDB: Get a single product
 const getOne = async (req, res) => {
   try {
     const { id } = req.params;
@@ -69,37 +69,38 @@ const getOne = async (req, res) => {
   }
 };
 
-//Mongo DB +
+// MongoDB: Delete a product
 const deleteOne = async (req, res) => {
   try {
     const { id } = req.params;
     const deletingProduct = await Product.findByIdAndDelete(id);
 
     if (!deletingProduct) {
-      res.status(404).json({
+      return res.status(404).json({
         data: null,
         message: "Product not found",
         status: "fail",
       });
-    } else {
-      //file remove from cloudinary
-      const publicId = extractPublicId(deletingProduct);
-      // Delete the image from Cloudinary
-      await cloudinary.uploader.destroy(
-        `uploads/${publicId}`,
-        (error, result) => {
-          if (error) {
-            throw new Error("Failed to delete image from Cloudinary");
-          }
-        }
-      );
+    }
 
-      res.status(200).json({
-        data: formattedObject(deletingProduct),
-        message: "Product deleted successfully",
-        status: "success",
+    // Remove product reference from its category
+    if (deletingProduct.category) {
+      await Category.findByIdAndUpdate(deletingProduct.category, {
+        $pull: { products: id },
       });
     }
+
+    // Remove product image from Cloudinary
+    const publicId = extractPublicId(deletingProduct);
+    await cloudinary.uploader.destroy(`uploads/${publicId}`, (error) => {
+      if (error) throw new Error("Failed to delete image from Cloudinary");
+    });
+
+    res.status(200).json({
+      data: formattedObject(deletingProduct),
+      message: "Product deleted successfully",
+      status: "success",
+    });
   } catch (error) {
     res.status(500).json({
       data: null,
@@ -109,26 +110,27 @@ const deleteOne = async (req, res) => {
   }
 };
 
-//Mongo DB +
+// MongoDB: Create a new product
 const post = async (req, res) => {
   try {
     const { name, description, battery, price, category } = req.body;
 
-    //save to MongoDB
     const newProduct = new Product({
       name,
       description,
       battery,
       price,
       category,
-      image: req.file.path, //cloudinary file path
+      image: req.file.path,
     });
     await newProduct.save();
 
-    //category - product (update)
-    await Category.findByIdAndUpdate(category, {
-      $push: { products: newProduct._id },
-    });
+    // Add product reference to category
+    if (category) {
+      await Category.findByIdAndUpdate(category, {
+        $push: { products: newProduct._id },
+      });
+    }
 
     res.json({
       data: formattedObject(newProduct),
@@ -144,48 +146,62 @@ const post = async (req, res) => {
   }
 };
 
-//Mongo DB+ (update / patch request)
+// MongoDB: Update a product
 const update = async (req, res) => {
   try {
     const { id } = req.params;
+    const { category: newCategory } = req.body;
 
     const sentProduct = {
       ...req.body,
     };
-    if (sentProduct.image && req.file) {
-      sentProduct.image = req.file.path; //cloudinary patH
+
+    if (req.file) {
+      sentProduct.image = req.file.path; // Cloudinary path
     }
 
-    //remove old image from cloudinary
+    // Fetch the previous product
     const prevProd = await Product.findById(id);
-    const updatingProduct = await Product.findByIdAndUpdate(id, sentProduct, {
-      new: true,
-      runValidators: true,
-    });
 
-    if (!updatingProduct) {
+    if (!prevProd) {
       return res.status(404).json({
         data: null,
         message: "Product not found",
         status: "fail",
       });
-    } else {
-      const publicId = extractPublicId(prevProd);
-      // Delete the image from Cloudinary
-      await cloudinary.uploader.destroy(
-        `uploads/${publicId}`,
-        (error, result) => {
-          if (error) {
-            throw new Error("Failed to delete image from Cloudinary");
-          }
-        }
-      );
-      res.status(200).json({
-        data: formattedObject(updatingProduct),
-        message: "Product updated successfully",
-        status: "success",
+    }
+
+    // Update product
+    const updatingProduct = await Product.findByIdAndUpdate(id, sentProduct, {
+      new: true,
+      runValidators: true,
+    });
+
+    // Manage category association
+    if (prevProd.category && prevProd.category.toString() !== newCategory) {
+      await Category.findByIdAndUpdate(prevProd.category, {
+        $pull: { products: id },
       });
     }
+    if (newCategory && prevProd.category?.toString() !== newCategory) {
+      await Category.findByIdAndUpdate(newCategory, {
+        $push: { products: id },
+      });
+    }
+
+    // Remove the old image from Cloudinary
+    if (req.file) {
+      const publicId = extractPublicId(prevProd);
+      await cloudinary.uploader.destroy(`uploads/${publicId}`, (error) => {
+        if (error) throw new Error("Failed to delete image from Cloudinary");
+      });
+    }
+
+    res.status(200).json({
+      data: formattedObject(updatingProduct),
+      message: "Product updated successfully",
+      status: "success",
+    });
   } catch (error) {
     res.status(500).json({
       data: null,
