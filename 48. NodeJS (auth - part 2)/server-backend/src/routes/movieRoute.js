@@ -1,5 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const { validateMovie } = require("../validations/movie");
+
 const {
   getAll,
   getOne,
@@ -7,13 +9,13 @@ const {
   deleteOne,
   update,
 } = require("../controllers/movieController");
-const {body} = require('express-validator');
+const { body } = require("express-validator");
 
 router.get("/", getAll);
 
 router.get("/:id", getOne);
 
-router.post("/", post);
+router.post("/", validateMovie, post);
 
 router.patch("/:id", update);
 
